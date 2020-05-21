@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUOTO</title>
+
+    <!--
+    http://www.showdownjs.com/
+    -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.0/markdown-it.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>VUOTO</h1>
+    </header>
+
+    <section id="content">
+
+    </section>
+
+    <script type="text/javascript">
+
+      var md = window.markdownit();
+
+      var elabora = function() {
+        console.log("--- elabora ---");
+        console.log(this.responseText);
+        var html = md.render(this.responseText);
+        document.querySelector("#content").innerHTML = html;
+      }
+
+      var popola = function() {
+
+        console.log("--- popola ---");
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", elabora);
+        oReq.open("GET", "content.md");
+        oReq.send();
+
+      }
+
+
+      popola();
+
+    </script>
+
+  </body>
+</html>
