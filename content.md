@@ -1,5 +1,11 @@
-# QUESTO È IL TITOLO DI MARKDOWN
+# QUESTO È UN TITOLO
 
-## questo è il sottotitolo del MARKDOWN
+## questo è un sottotitolo
 
-Questo è un p di markdown.
+Questo è un paragrafo normale.
+
+Questo è un paragrafo con dentro **bold** e anche *italic* e anche ++sottolineato++ e anche ==evidenziato== e basta.
+
+::: box
+questo è un testo dentro un box
+:::

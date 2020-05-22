@@ -1,4 +1,18 @@
 body {
-  background-color: black;
+  background-color: blue;
   color: violet;
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  max-width: 414px;
+}
+
+nav {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
+
+.inevidenza {
+  background-color: yellow;
+  padding: 20px;
+  margin-top: 20px;
 }
