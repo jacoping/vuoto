@@ -1,75 +1,70 @@
+/*
+****** SETTINGS ******
+*/
 
-      var md = window.markdownit()
-      .use(window.markdownitMark)
-      .use(window.markdownitIns)
-      .use(window.markdownitContainer, 'box', {
+var chapters = [
+  "01.chapter",
+  "02.chapter",
+  "03.chapter"
+]
 
-            validate: function(params) {
-              //return params.trim().match(/^box\s+(.*)$/);
-              return true;
-            },
 
-            render: function (tokens, idx) {
-              var m = tokens[idx].info.trim().match(/^box\s+(.*)$/);
+/*
+****** MARKDOWN-IT CONFIGURATOIN ******
+*/
 
-              if (tokens[idx].nesting === 1) {
-                // opening tag
-                return '<div class="inevidenza">';
+var md = window.markdownit()
+  .use(window.markdownitMark)
+  .use(window.markdownitIns)
+  .use(window.markdownitContainer, 'box', {
 
-              } else {
-                // closing tag
-                return '</div>\n';
-              }
-            }
-          })
+    validate: function(params) {
+      //return params.trim().match(/^box\s+(.*)$/);
+      return true;
+    },
 
-      var capitoli = [
-        "01.chapter",
-        "02.chapter",
-        "03.chapter"
-      ]
+    render: function(tokens, idx) {
+      var m = tokens[idx].info.trim().match(/^box\s+(.*)$/);
 
-      console.log(capitoli)
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        return '<div class="inevidenza">';
 
-      var elabora = function() {
-        var html = md.render(this.responseText);
-        document.querySelector("#content").innerHTML = html;
+      } else {
+        // closing tag
+        return '</div>\n';
       }
-
-      var elabora2 = function () {
-        let div = document.createElement('div');
-        div.classList.add("container");
-        document.querySelector("#content").appendChild(div);
-        let elabora = function() {
-        var html = md.render(this.responseText);
-        div.innerHTML = html;
-        }
-        return elabora;
-      }
-
-      var popola = function() {
-
-        console.log("--- popola ---");
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", elabora2());
-        oReq.open("GET", "./chapters/01.chapter");
-        oReq.send();
-
-        console.log("--- popola ---");
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", elabora2());
-        oReq.open("GET", "./chapters/02.chapter");
-        oReq.send();
-
-        console.log("--- popola ---");
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", elabora2());
-        oReq.open("GET", "./chapters/03.chapter");
-        oReq.send();
-
-      }
+    }
+  })
 
 
+/*
+****** FUNCTIONS ******
+*/
 
-      popola();
-      
+var elabora = function() {
+  let div = document.createElement('div');
+  div.classList.add("container");
+  document.querySelector("#content").appendChild(div);
+  let elabora = function() {
+    var html = md.render(this.responseText);
+    div.innerHTML = html;
+  }
+  return elabora;
+}
+
+var popola = function() {
+
+  chapters.forEach(function(el) {
+
+    console.log("--- popola: " + el + " ---");
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", elabora());
+    oReq.open("GET", "./chapters/" + el);
+    oReq.send();
+
+  })
+
+}
+
+popola();
