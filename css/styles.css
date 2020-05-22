@@ -11,9 +11,8 @@ nav {
   padding: 20px;
 }
 
-.container {
-  margin: 20px 0;
-  padding: 20px 0;
+.chapter {
+  padding: 10px 0 40px;
   border-bottom: 1px solid white;
 }
 

@@ -1,17 +1,6 @@
 /*
-****** SETTINGS ******
-*/
-
-var chapters = [
-  "01.chapter",
-  "02.chapter",
-  "03.chapter"
-]
-
-
-/*
-****** MARKDOWN-IT CONFIGURATOIN ******
-*/
+ ****** MARKDOWN-IT CONFIGURATOIN ******
+ */
 
 var md = window.markdownit()
   .use(window.markdownitMark)
@@ -38,33 +27,55 @@ var md = window.markdownit()
   })
 
 
+
+
+
 /*
-****** FUNCTIONS ******
-*/
+ ****** FUNCTIONS ******
+ */
 
-var elabora = function() {
-  let div = document.createElement('div');
-  div.classList.add("container");
-  document.querySelector("#content").appendChild(div);
-  let elabora = function() {
-    var html = md.render(this.responseText);
-    div.innerHTML = html;
-  }
-  return elabora;
-}
+var popola = function(json) {
 
-var popola = function() {
+  json.forEach(function(el) {
 
-  chapters.forEach(function(el) {
-
-    console.log("--- popola: " + el + " ---");
+    console.log("--- popola " + el.filename + " : " + el.title + " ---");
     var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", elabora());
-    oReq.open("GET", "./chapters/" + el);
+    oReq.addEventListener("load", function() {
+
+      // creates DOM element in the right position
+      let div = document.createElement('div');
+      div.classList.add("chapter");
+      document.querySelector("#content").appendChild(div);
+
+      // returns function with closure on DOM element
+      return function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var html = md.render(this.responseText);
+          div.innerHTML = html;
+        }
+      }
+    }());
+
+    oReq.open("GET", "/chapters/" + el.filename);
     oReq.send();
 
   })
 
 }
 
-popola();
+
+
+
+/*
+ ****** LOAD CHAPTERS AND STARTUP ******
+ */
+
+
+var chaptersReg = new XMLHttpRequest();
+chaptersReg.addEventListener("load", function() {
+  if (this.readyState == 4 && this.status == 200) {
+    popola(JSON.parse(this.responseText));
+  }
+});
+chaptersReg.open("GET", "/chapters/chapters.json");
+chaptersReg.send();
