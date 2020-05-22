@@ -62,22 +62,52 @@
             }
           })
 
+      var capitoli = [
+        "01.chapter",
+        "02.chapter",
+        "03.chapter"
+      ]
+
+      console.log(capitoli)
+
       var elabora = function() {
-        console.log("--- elabora ---");
-        console.log(this.responseText);
         var html = md.render(this.responseText);
         document.querySelector("#content").innerHTML = html;
+      }
+
+      var elabora2 = function () {
+        let div = document.createElement('div');
+        div.classList.add("container");
+        document.querySelector("#content").appendChild(div);
+        let elabora = function() {
+        var html = md.render(this.responseText);
+        div.innerHTML = html;
+        }
+        return elabora;
       }
 
       var popola = function() {
 
         console.log("--- popola ---");
         var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", elabora);
-        oReq.open("GET", "content.md");
+        oReq.addEventListener("load", elabora2());
+        oReq.open("GET", "01.chapter");
+        oReq.send();
+
+        console.log("--- popola ---");
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", elabora2());
+        oReq.open("GET", "02.chapter");
+        oReq.send();
+
+        console.log("--- popola ---");
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", elabora2());
+        oReq.open("GET", "03.chapter");
         oReq.send();
 
       }
+
 
 
       popola();
