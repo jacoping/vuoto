@@ -38,7 +38,7 @@ var popola = function(json) {
 
   json.forEach(function(el) {
 
-    console.log("--- popola " + el.filename + " : " + el.title + " ---");
+    console.log("--- popola " + el.filename + " ---");
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", function() {
 
