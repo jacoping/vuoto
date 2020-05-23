@@ -54,9 +54,9 @@ var md = window.markdownit()
  ****** FUNCTIONS ******
  */
 
-var popola = function(json) {
+var popola = function(chapters) {
 
-  json.forEach(function(el) {
+  chapters.forEach(function(el) {
 
     console.log("--- popola " + el.filename + " ---");
     var oReq = new XMLHttpRequest();
@@ -91,11 +91,11 @@ var popola = function(json) {
  */
 
 
-var chaptersReg = new XMLHttpRequest();
-chaptersReg.addEventListener("load", function() {
+var chaptersReq = new XMLHttpRequest();
+chaptersReq.addEventListener("load", function() {
   if (this.readyState == 4 && this.status == 200) {
     popola(JSON.parse(this.responseText));
   }
 });
-chaptersReg.open("GET", "/chapters/chapters.json");
-chaptersReg.send();
+chaptersReq.open("GET", "/chapters/chapters.json");
+chaptersReq.send();
