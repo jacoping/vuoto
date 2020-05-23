@@ -7,6 +7,7 @@
     <title>VUOTO</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 
     <!--
@@ -16,6 +17,9 @@
     <script type="text/javascript" src="./js/markdown-it-mark.min.js"></script>
     <script type="text/javascript" src="./js/markdown-it-ins.min.js"></script>
     <script type="text/javascript" src="./js/markdown-it-container.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+
   </head>
 
   <body>
@@ -35,6 +39,30 @@
     </section>
 
     <script type="text/javascript" src="./js/main.js"></script>
+
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
+    </script>
 
 
   </body>

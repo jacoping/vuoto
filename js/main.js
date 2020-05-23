@@ -2,7 +2,9 @@
  ****** MARKDOWN-IT CONFIGURATOIN ******
  */
 
-var md = window.markdownit()
+var md = window.markdownit({
+  html: true,
+})
   .use(window.markdownitMark)
   .use(window.markdownitIns)
   .use(window.markdownitContainer, 'box', {
@@ -54,6 +56,34 @@ var md = window.markdownit()
  ****** FUNCTIONS ******
  */
 
+// loads slider
+// not more than one slider per chapter
+var loadslider = function (selector) {
+
+  var mySwiper = new Swiper (selector, {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+}
+
+
 var popola = function(chapters) {
 
   chapters.forEach(function(el) {
@@ -81,6 +111,10 @@ var popola = function(chapters) {
         if (this.readyState == 4 && this.status == 200) {
           var html = md.render(this.responseText);
           div.innerHTML = html;
+
+          let selector =  '#' + el.slug+ ' .swiper-container';
+          loadslider(selector);
+
         }
       }
     }());
