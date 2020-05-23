@@ -62,9 +62,18 @@ var popola = function(chapters) {
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", function() {
 
-      // creates DOM element in the right position
+      // create DOM element fot TOC
+      let li = document.createElement('li');
+      let a = document.createElement('a');
+      a.href = "#"+el.slug;
+      a.innerHTML = el.title;
+      li.appendChild(a);
+      document.querySelector('#toc').appendChild(li);
+
+      // creates DOM element for container in the right position
       let div = document.createElement('div');
       div.classList.add("chapter");
+      div.setAttribute("id", el.slug);
       document.querySelector("#content").appendChild(div);
 
       // returns function with closure on DOM element
