@@ -1,6 +1,7 @@
 # Dobbiamo fare spazio (pubblico)
 
-Osserviamo oggi le nostre città da un punto di vista mutato. L’eccezionalità del momento ci propone uno scenario senza precedenti: città svuotate, silenziose, il cui l’unico segno di vita è dato dal risveglio della natura durante una primavera insolita. Al di là del fascino di queste immagini metafisiche, l’assenza è palpabile. La nostra vita pubblica è stata improvvisamente sospesa e non sappiamo ancora figurarci come questa, e di conseguenza i luoghi in cui si svolge, si trasformeranno nel prossimo futuro. L’occasione è insieme delicata e preziosa: le decisioni che prenderemo oggi determineranno il modo in cui, nei prossimi mesi o forse anni, vivremo le città.
+Osserviamo oggi le nostre città da un punto di vista mutato. L’eccezionalità del momento ci propone uno scenario senza precedenti: città svuotate, silenziose, il cui l’unico segno di vita è dato dal risveglio della natura durante una primavera insolita. Al di là del fascino di queste immagini metafisiche, l’assenza è palpabile. La nostra vita pubblica è stata improvvisamente sospesa e non sappiamo ancora figurarci come questa, e di conseguenza i luoghi in cui si svolge, si trasformeranno nel prossimo futuro
+==L’occasione è insieme delicata e preziosa: le decisioni che prenderemo oggi determineranno il modo in cui, nei prossimi mesi o forse anni, vivremo le città.==
 
 L’emergenza sanitaria ha imposto un irrigidimento della disciplina biopolitica, inducendo sistemi di controllo sociale per garantire l’isolamento e contenere il contagio: la paura dell’altro, già pericolosamente accresciuta dall’inasprimento dei nazionalismi, è diventata tristemente reale e ci sentiamo tutto ad un tratto insicuri e inibiti in qualsiasi scambio con il mondo esterno.
 
