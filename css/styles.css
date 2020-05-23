@@ -88,6 +88,7 @@ body {
   color: #50e95d;
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
   max-width: 414px;
+  overflow-x: hidden;
   padding: 10px;
 }
 
@@ -105,19 +106,19 @@ nav {
 /* STILI INTERNI AI CAPITOLI */
 p {
   font-family: "Montserrat", sans-serif;
-  line-height: 1.35;
+  line-height: 1.2;
   }
 
 h1 {
   font-size: 2.5em;
-  line-height: 80%;
+  line-height: 0.8;
   font-weight: 600;
   margin: 0.6em 0 1em;
 }
 
 h2 {
   font-size: 1.5em;
-  line-height: 80%;
+  line-height: 0.8;
   font-weight: 600;
   margin: 10px 0;
 }
@@ -137,7 +138,12 @@ ins {
 mark {
   background-color: yellow;
   color: black;
-  font-size: 105%
+  font-size: 105%;
+  line-height: 1.35;
+}
+
+img {
+  width: 100%;
 }
 
 .box {
@@ -147,10 +153,7 @@ mark {
 }
 
 .big {
-  font-size: 30px;
-  line-height: 80%;
+  font-size: 130%;
+  line-height: 0.8;
   padding: 10px;
-}
-.big mark {
-  line-height: 1.35;
 }
