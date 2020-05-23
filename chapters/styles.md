@@ -1,6 +1,6 @@
-# QUESTO È UN TITOLO 1
+# Questo è un titolo
 
-## questo è un sottotitolo
+## Questo è un sottotitolo
 
 Questo è un paragrafo normale.
 
@@ -8,4 +8,8 @@ Questo è un paragrafo con dentro **bold** e anche *italic* e anche ++sottolinea
 
 ::: box
 questo è un testo dentro un box
+:::
+
+::: big
+questo è un testo più grande
 :::

@@ -8,16 +8,36 @@ var md = window.markdownit()
   .use(window.markdownitContainer, 'box', {
 
     validate: function(params) {
-      //return params.trim().match(/^box\s+(.*)$/);
+      return params.trim().match(/^box$/);
       return true;
     },
 
     render: function(tokens, idx) {
-      var m = tokens[idx].info.trim().match(/^box\s+(.*)$/);
+      var m = tokens[idx].info.trim().match(/^box$/);
 
       if (tokens[idx].nesting === 1) {
         // opening tag
-        return '<div class="inevidenza">';
+        return '<div class="box">';
+
+      } else {
+        // closing tag
+        return '</div>\n';
+      }
+    }
+  })
+  .use(window.markdownitContainer, 'big', {
+
+    validate: function(params) {
+      return params.trim().match(/^big$/);
+      return true;
+    },
+
+    render: function(tokens, idx) {
+      var m = tokens[idx].info.trim().match(/^big$/);
+
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        return '<div class="big">';
 
       } else {
         // closing tag
@@ -56,7 +76,7 @@ var popola = function(json) {
       }
     }());
 
-    oReq.open("GET", "/chapters/" + el.filename);
+    oReq.open("GET", "/chapters/" + el.slug + ".md");
     oReq.send();
 
   })
