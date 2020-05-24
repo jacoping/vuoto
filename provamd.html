@@ -7,6 +7,7 @@
     <title>VUOTO</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 
@@ -24,8 +25,86 @@
 
   <body>
 
+
     <header>
-      <h1>VUOTO</h1>
+    <style media="screen">
+    html {margin: 0;}
+
+    .logoContainer {
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .animatedLogo {
+      font-family: Questrial, sans-serif;
+      font-size: 28.5vw;
+      vertical-align: text-top;
+
+      transition: line-height 1s, margin-top 1s;
+
+      padding: 0;
+      border: 0;
+      margin: 0;
+      margin-bottom: 20vw;
+
+      line-height: .42;
+      margin-top: -10vw;
+
+      text-transform: uppercase;
+
+    }
+
+  </style>
+
+  <body>
+
+<div class="logoContainer">
+
+    <div class="animatedLogo">
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+      vuoto
+    </div>
+
+    <div class="">
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+let toggle = 1;
+document.querySelector(".animatedLogo").addEventListener("click", function(){
+  if (toggle) {
+    document.querySelector(".animatedLogo").style.lineHeight = 0.015;
+    document.querySelector(".animatedLogo").style.marginTop = "11vh";
+  } else {
+    document.querySelector(".animatedLogo").style.lineHeight = .42;
+    document.querySelector(".animatedLogo").style.marginTop = "-10vw";
+  }
+  toggle = !toggle;
+});
+
+</script>
+
+
     </header>
 
     <nav>
@@ -40,29 +119,6 @@
 
     <script type="text/javascript" src="./js/main.js"></script>
 
-    <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })
-    </script>
 
 
   </body>
