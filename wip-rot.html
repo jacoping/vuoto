@@ -33,16 +33,19 @@
     </div>
     <script type="text/javascript">
       let toggle = 1;
+      document.querySelector(".animatedLogo").style.transform = "rotate(180deg)";
       document.querySelector(".animatedLogo").addEventListener("click", function() {
         if (toggle) {
           document.querySelector(".animatedLogo").style.lineHeight = "0.015";
           document.querySelector(".animatedLogo").style.marginTop = "11vh";
+          document.querySelector(".animatedLogo").style.transform = "rotate(0deg)";
           document.querySelector("html").style.overflow = "visible";
           document.querySelector("body").style.overflow = "visible";
 
         } else {
           document.querySelector(".animatedLogo").style.lineHeight = ".42";
           document.querySelector(".animatedLogo").style.marginTop = "-10vw";
+          document.querySelector(".animatedLogo").style.transform = "rotate(180deg)";
           document.querySelector("html").style.overflow = "hidden";
           document.querySelector("body").style.overflow = "hidden";
         }

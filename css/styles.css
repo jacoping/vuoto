@@ -87,7 +87,7 @@ body {
   background-color: #0f2486;
   color: #50e95d;
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
-  max-width: 414px;
+  max-width: 480px;
   overflow-x: hidden;
   margin: 0 10px;
 }
@@ -186,5 +186,12 @@ body {
 	margin-bottom: 20vw;
 	line-height: .42;
 	margin-top: -10vw;
-	transform: rotate(180deg);
 }
+
+
+
+
+/* ************ */
+/* LOGO ANIMATO */
+/* ************ */
+@media screen and (min-width: 600px;)
