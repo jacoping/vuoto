@@ -27,30 +27,28 @@
 
     <header>
     <style media="screen">
-    html {margin: 0;}
+
+    html,
+    body {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+
 
     .logoContainer {
       overflow: hidden;
-      margin: auto;
+      text-align: center;
     }
 
     .animatedLogo {
       font-family: Questrial, sans-serif;
       font-size: 28.5vw;
-      vertical-align: text-top;
-
-      transition: line-height 1s, margin-top 1s;
-
-      padding: 0;
-      border: 0;
-      margin: 0;
+      transition: line-height 1s, margin-top 1s, transform 1s;
       margin-bottom: 20vw;
-
       line-height: .42;
       margin-top: -10vw;
-
-      text-transform: uppercase;
-
+      transform: rotate(180deg);
     }
 
   </style>
@@ -60,28 +58,7 @@
 <div class="logoContainer">
 
     <div class="animatedLogo">
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-      vuoto
-    </div>
-
-    <div class="">
-
+      VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO
     </div>
 
 </div>
@@ -92,11 +69,18 @@
 let toggle = 1;
 document.querySelector(".animatedLogo").addEventListener("click", function(){
   if (toggle) {
-    document.querySelector(".animatedLogo").style.lineHeight = 0.015;
+    document.querySelector(".animatedLogo").style.lineHeight = "0.015";
     document.querySelector(".animatedLogo").style.marginTop = "11vh";
+    document.querySelector(".animatedLogo").style.transform = "rotate(0deg)";
+    document.querySelector("html").style.overflow = "visible";
+    document.querySelector("body").style.overflow = "visible";
+
   } else {
-    document.querySelector(".animatedLogo").style.lineHeight = .42;
+    document.querySelector(".animatedLogo").style.lineHeight = ".42";
     document.querySelector(".animatedLogo").style.marginTop = "-10vw";
+    document.querySelector(".animatedLogo").style.transform = "rotate(180deg)";
+    document.querySelector("html").style.overflow = "hidden";
+    document.querySelector("body").style.overflow = "hidden";
   }
   toggle = !toggle;
 });

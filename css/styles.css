@@ -89,7 +89,7 @@ body {
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
   max-width: 414px;
   overflow-x: hidden;
-  margin: 10px;
+  margin: 0 10px;
 }
 
 nav {
