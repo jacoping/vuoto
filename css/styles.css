@@ -158,3 +158,33 @@ img {
   line-height: 0.8;
   padding: 10px;
 }
+
+
+
+
+/* ************ */
+/* LOGO ANIMATO */
+/* ************ */
+
+html,
+body {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+
+.logoContainer {
+	overflow: hidden;
+	text-align: center;
+}
+
+.animatedLogo {
+	font-family: Questrial, sans-serif;
+	font-size: 28.5vw;
+	transition: line-height 1s, margin-top 1s, transform 1s;
+	margin-bottom: 20vw;
+	line-height: .42;
+	margin-top: -10vw;
+	transform: rotate(180deg);
+}
