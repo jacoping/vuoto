@@ -8,8 +8,19 @@
     "title": "Aprilia"
   },
   {
+    "slug": "wpac",
+    "title": "WPAC"
+  },
+  {
+    "slug": "lospettacolo",
+    "title": "Lo spettacolo in luoghi di isolamento"
+  },
+  {
+    "slug": "backtothefuture",
+    "title": "Back To The Future"
+  },
+  {
     "slug": "styles",
     "title": "Esempi di stili"
-
   }
 ]
