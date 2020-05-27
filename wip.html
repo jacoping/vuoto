@@ -31,23 +31,41 @@
         VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO VUOTO
       </div>
     </div>
+
     <script type="text/javascript">
-      let toggle = 1;
-      document.querySelector(".animatedLogo").addEventListener("click", function() {
-        if (toggle) {
+        let logoClosed = false;
+
+        let openLogo = function () {
+          console.log("openLogo");
           document.querySelector(".animatedLogo").style.lineHeight = "0.01";
           document.querySelector(".animatedLogo").style.marginTop = "11vh";
+          setTimeout(function() {
           document.querySelector("html").style.overflow = "visible";
           document.querySelector("body").style.overflow = "visible";
-        } else {
+          window.removeEventListener('scroll', openLogo);
+          document.querySelector(".animatedLogo").removeEventListener("click", openLogo);
+          document.querySelector(".animatedLogo").addEventListener("click", closeLogo);
+          logoClosed = true;
+        }, 1000);
+        }
+
+        let closeLogo = function () {
           document.querySelector(".animatedLogo").style.lineHeight = ".42";
           document.querySelector(".animatedLogo").style.marginTop = "-10vw";
           document.querySelector("html").style.overflow = "hidden";
           document.querySelector("body").style.overflow = "hidden";
+          setTimeout(function() {
+            window.addEventListener('scroll', openLogo);
+            document.querySelector(".animatedLogo").addEventListener("click", openLogo);
+            document.querySelector(".animatedLogo").removeEventListener("click", closeLogo);
+            logoClosed = false;
+        }, 1000);
         }
-        toggle = !toggle;
-      });
-    </script>
+
+        window.addEventListener('scroll', openLogo);
+        document.querySelector(".animatedLogo").addEventListener("click", openLogo);
+      </script>
+      
   </header>
 
   <nav>
