@@ -8,12 +8,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <style>
   html,
   body {
-    height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -23,39 +23,97 @@
   var controller = new ScrollMagic.Controller();
 </script>
 <style media="screen">
+  @keyframes jump {
+    0% {
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 5vw;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+
+  /* richiesto da scrollmagic */
+  html,
+  body {
+    height: 100%;
+  }
+
   html,
   body,
   div,
   p {
     padding: 0;
     margin: 0;
-
-    color: white;
-    font-family: sans-serif;
   }
 
   html {
     background: #2F243A;
+    color: white;
+    font-family: sans-serif;
   }
 
-  .wrapper {
+  .header {
     display: flex;
     width: 100vw;
     height: 2500px;
     justify-content: center;
   }
 
+  .main {
+    height: 20000px;
+    padding: 0 4vw;
+  }
+
+  /* real styles for content */
+
   .logo-container {
     /* background: rgba(230, 230, 230, .2);*/
     position: fixed;
     transform-origin: 50% 50%;
     font-size: 25vw;
-    line-height: .3vw;
-    top: 13vh;
+    line-height: .015;
+    top: 13vw;
   }
 
-  .main {
-    height: 10000px;
+  .line {
+    font-size: 4vmin;
+    height: 2.5vmin;
+    margin-bottom: 50vmin;
+  }
+
+  @media (min-aspect-ratio: 1/1) {
+    .logo-container {
+      font-size: 12.5vw;
+      top: 7.5vw;
+      margin-left: 20vw;
+    }
+
+  }
+
+
+
+
+  #arrow-down {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 8vmin;
+  }
+
+  #arrow-down p {
+    position: fixed;
+    bottom: 10px;
+    animation: jump 5s infinite;
+    transform: translateX(-50%);
+  }
+
+  .hidden {
+    display: none;
   }
 
   .logger {
@@ -65,21 +123,12 @@
     font-size: 2vw;
     padding: 10px;
   }
-
-  .what {
-    font-size: 5vw;
-    padding: 5vw;
-  }
-  .line {
-    height: 20px;
-    margin-bottom: 800px;
-  }
 </style>
 
 <body>
 
 
-  <div class="wrapper">
+  <div class="header">
     <div class="logo-container">
       <p>VUOTO</p>
       <p>VUOTO</p>
@@ -103,23 +152,30 @@
       <p>VUOTO</p>
       <p class="last">VUOTO</p>
     </div>
-
-  </div> <!-- wrapper -->
+  </div> <!-- logo-wrapper -->
 
   <div class="main">
+
+    <div id="arrow-down">
+      <p class="fa fa-chevron-down"></p>
+    </div>
+
     <div class="what">
       <p class="line">VUOTO <del>non</del> è un libro</p>
-      <p class="line">VUOTO <del>non</del> è un magazine</p>
-      <p class="line">VUOTO <del>non</del> è un fanzine</p>
       <p class="line">VUOTO <del>non</del> è un libro d’artista</p>
-      <p class="line">VUOTO <del>non</del> a una redazione</p>
+      <p class="line">VUOTO <del>non</del> è un magazine</p>
+      <p class="line">VUOTO <del>non</del> è un journal</p>
+      <p class="line">VUOTO <del>non</del> è una fanzine</p>
+      <p class="line">VUOTO <del>non</del> ha un piano annuale</p>
       <p class="line">VUOTO <del>non</del> ha un tema</p>
       <p class="line">VUOTO <del>non</del> ha un formato</p>
+      <p class="line">VUOTO <del>non</del> ha una redazione</p>
       <p class="line">VUOTO <del>non</del> è vuoto</p>
     </div>
   </div>
 
-  <div class="logger">...</div>
+  <div class="logger"></div>
+
 
 
   <script type="text/javascript">
@@ -185,7 +241,13 @@
 
 
 
-
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.header',
+        offset: 2000
+      })
+      .setClassToggle("#arrow-down", "hidden")
+      .triggerHook(1)
+      .addTo(controller)
 
 
 
@@ -198,18 +260,18 @@
         .setPin(el, {
           pushFollowers: false
         })
-        .addTo(controller);
+        .triggerHook(0.4)
+        .addTo(controller)
     }
 
     let linesArray = document.querySelectorAll('.line');
     let lineHeight = document.querySelector('.line').clientHeight;
     let margin = parseInt(getComputedStyle(document.querySelector('.line')).marginBottom);
-    let duration = 6000;
+    let duration = 5000;
     let offset = 0;
     linesArray.forEach(function(el, idx) {
       setPin(el, offset, duration);
       offset = offset - (lineHeight * 2);
-      duration = duration - margin + lineHeight;
     })
   </script>
 
