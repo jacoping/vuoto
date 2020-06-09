@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="import" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <title>VUOTO</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<script>
+  // init controller
+  var controller = new ScrollMagic.Controller();
+</script>
+<style media="screen">
+
+  /* richiesto da scrollmagic */
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  html,
+  body,
+  div,
+  p,
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: inherit
+  }
+
+
+
+  /****** real styles for content ******/
+
+  .header {
+    display: flex;
+    width: 100vw;
+    height: 900px;
+    justify-content: center;
+  }
+
+  .main {
+    height: 30000px;
+    padding: 0 4vw;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+  }
+
+  .spacer {
+    height: 100vh;
+  }
+
+
+  /* COLORS */
+
+  html {
+    background: #0f2486;
+    color: white;
+  }
+
+  .logo-container p {
+    color: #50e95d;
+  }
+
+  .logo-container.closed p {
+    opacity: 0.3;
+  }
+
+  .logo-container.closed .last {
+    opacity: 0.99;
+  }
+
+
+  /* stili logo */
+  .logo-container {
+    position: fixed;
+    transform-origin: 50% 50%;
+    font-size: 25.5vw;
+    line-height: .42;
+    top: -4vh;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    transition: line-height 1s, margin-top 1s, top 1s, opacity 1s;
+    opacity: 1;
+  }
+
+  .logo-container.closed {
+    line-height: .015;
+    top: 9vh;
+  }
+
+  @media (min-aspect-ratio: 1/1) {
+    .logo-container {
+      font-size: 12.5vw;
+      top: 7.5vw;
+      margin-left: 20vw;
+    }
+  }
+
+
+
+  /* stili what */
+  .line {
+    font-size: 4vmin;
+    height: 2.5vmin;
+    margin-bottom: 50vmin;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: inline-block;
+  }
+
+  .line span {
+    font-variant: small-caps;
+    font-weight: 500;
+    display: none;
+  }
+
+  .visible {
+    opacity: 1
+  }
+
+  @media (max-aspect-ratio: 3/4) {
+    .line {
+      font-size: 6vw;
+      height: 4vw;
+    }
+  }
+
+
+
+
+
+
+
+
+
+  .debug div {
+    border: 1px solid black;
+  }
+
+
+
+
+
+
+</style>
+
+<body class="no-debug">
+
+
+  <div class="header">
+    <div class="logo-container">
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <p>VUOTO</p>
+      <h1 class="last">VUOTO</h1>
+    </div>
+  </div> <!-- logo-wrapper -->
+
+  <div class="main">
+
+    <div class="what_before spacer">
+    .
+    </div>
+
+    <div class="what">
+      <p class="line"><span>vuoto</span> <del>non</del> è un libro</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> è un magazine</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> è un libro d’artista</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> è un journal</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> è una fanzine</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> ha un piano annuale</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> ha un tema</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> ha un formato</p><br>
+      <p class="line"><span>vuoto</span> <del>non</del> ha una redazione</p><br>
+      <p class="line"><span>vuoto</span> non è vuoto</p>
+    </div>
+
+    <div class="what_after spacer">
+    </div>
+    <div class="after_after spacer">
+    </div>
+  </div>
+
+  <div class="logger"></div>
+
+
+
+  <script type="text/javascript">
+
+
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.main',
+        offset: -200
+      })
+      .setClassToggle(".logo-container", "closed")
+      .triggerHook(.5)
+      .addTo(controller)
+
+
+
+
+    // INGRESSO WHAT
+
+    let setPin = function(el, offset, duration) {
+      var scene = new ScrollMagic.Scene({
+          triggerElement: el,
+          offset: offset,
+          duration: duration,
+          triggerHook: 0.3
+        })
+        .setPin(el, {
+          pushFollowers: false
+        })
+        .addTo(controller)
+
+      var scene = new ScrollMagic.Scene({
+          triggerElement: el,
+          offset: offset,
+          triggerHook: 0.5
+        })
+        .setClassToggle(el, "visible")
+        .addTo(controller)
+    }
+
+    let linesArray = document.querySelectorAll('.line');
+    let lineHeight = document.querySelector('.line').clientHeight;
+    let margin = parseInt(getComputedStyle(document.querySelector('.line')).marginBottom);
+    let duration = (lineHeight + margin) * 20;
+    let offset = 0;
+    linesArray.forEach(function(el, idx) {
+      setPin(el, offset, duration);
+      offset = offset - (lineHeight * 2);
+    })
+
+
+
+    // USCITA WHAT
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.what_after',
+        duration: 0,
+        triggerHook: 0.35
+      })
+      .setTween(gsap.timeline()
+        .to('.line', {
+          duration: 2,
+          ease: "elastic.in(1, 0.75)",
+          x: '500%'
+
+        })
+        .set('.line', {
+          opacity: 0
+        })
+      )
+      .addTo(controller)
+
+
+
+
+
+      // VARIAZIONE SFONDO
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.after_after',
+        duration: 0,
+        triggerHook: 0.35
+      })
+      .setTween(gsap.timeline()
+        .to('html', {
+          duration: 4,
+          background: 'black'
+        })
+      )
+      .addTo(controller)
+
+  </script>
+
+
+</body>
+
+</html>
