@@ -117,26 +117,25 @@
     transform-origin: 50% 50%;
     font-size: 25.5vw;
     line-height: .42;
-    top: -4vh;
+    top: -14vh;
     font-weight: 500;
     font-family: Montserrat, sans-serif;
     transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
+    z-index: 9;
+    background: blue;
+    padding: 11vw 4vw;
   }
 
   .logo-container.closed {
     line-height: .015;
-    top: 12vw;
+    top: 0vw;
   }
 
-  /* logo per schermi orizzontali */
-  @media (min-aspect-ratio: 4/3) {
-    .logo-container.closed {
-      font-size: 12.5vw;
-      top: 7.5vw;
-      margin-left: 20vw;
-    }
+  body, .header, .logo-container {
+    background: inherit;
   }
+
 
 
 
@@ -164,6 +163,7 @@
     .line {
       font-size: 6vw;
       height: 4vw;
+      color: red;
     }
   }
 
@@ -176,13 +176,6 @@
     height: auto;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  @media (min-aspect-ratio: 1/1) {
-    .pics_container img {
-      width: auto;
-      height: 50vh;
-    }
   }
 
   img.active,
@@ -202,20 +195,23 @@
 
   .vertigo {
     width: 80vw;
-    margin-bottom: 30vh;
     font-weight: 400;
+    margin: 30vh auto 0;
+    font-size: 3vw;
   }
 
   .vertigo h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 10vw;
+    font-size: 3em;
     font-weight: 300;
     line-height: 0.9;
   }
 
   .vertigo p {
-    font-size: 3vw;
+    font-size: 1em;
     margin-bottom: 2vh;
+    text-align: justify;
+    hyphens: auto;
   }
 
   .vertigo .self {
@@ -224,6 +220,62 @@
     color: #50e95d;
     text-transform: uppercase;
   }
+
+
+  .vacuum {
+    margin-left: 40vh;
+  }
+  .vacuum .pic {
+    background-image:  url("./pics/vacuumcleaner.jpg");
+    background-size: 50vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: center;
+    width: 50vw;
+    height: 100vw;
+  }
+
+
+
+
+  /* per schermi orizzontali */
+  @media (min-aspect-ratio: 4/3) {
+    .logo-container.closed {
+      font-size: 12.5vw;
+      top: 2.5vw;
+      margin-left: 20vw;
+      padding: 5vw 3vw;
+    }
+
+    .pics_container img {
+      width: auto;
+      height: 60vh;
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .imagebox {
+      top: 35vh;
+    }
+
+    .vertigo {
+      width: 50vw;
+      font-weight: 400;
+      margin: 40vh 0 0 40vw;
+      font-size: 1.8vw;
+    }
+
+    .vacuum {
+      margin-top: 0;
+      margin-left: 0;
+    }
+    .vacuum .pic {
+      background-size: 28vw auto;
+      width: 30vw;
+      height: 50vw;
+    }
+  }
+
 
 
 
@@ -235,6 +287,7 @@
   .debug div {
     border: 1px solid red;
   }
+
 </style>
 
 <body class="no-debug">
@@ -268,8 +321,7 @@
 
   <div class="main">
 
-    <div class="what_before spacer">
-    </div>
+    <div class="what_before spacer"></div>
 
     <div class="what">
       <p class="line"><span>vuoto</span> <del>non</del> è un libro</p><br>
@@ -290,6 +342,7 @@
     <div class="spacer"></div>
     <div class="spacer"></div>
 
+    <div class="pics_container"></div>
     <div class="vertigo">
       <h2>
         <strong>VUOTO 1 </strong><br> VERTIGO
@@ -315,9 +368,11 @@
         <span class="self">vertigo</span> è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
       </p>
     </div>
-
-    <div class="pics_container">
+    <div class="vacuum">
+      <div class="pic"></div>
     </div>
+
+
   </div>
   <div class="footer gowhite">
     vuoto è un progetto di <br>orizzontale + atto
