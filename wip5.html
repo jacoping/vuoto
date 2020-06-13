@@ -33,6 +33,8 @@
     height: 100%;
   }
 
+  /* reset and general layout styles */
+
   body {
     overflow-x: hidden;
   }
@@ -64,7 +66,8 @@
     padding: 0 4vw;
   }
 
-  .main, .footer {
+  .main,
+  .footer {
     font-family: 'Lora', serif;
     font-weight: 700;
   }
@@ -192,9 +195,20 @@
 
 
 
+  .vertigo {
+    margin-bottom: 30vh;
+  }
+  .vertigo p {
+    margin-bottom: 2vh;
+  }
+
+
+
+
+
 
   .debug div {
-    border: 1px solid black;
+    border: 1px solid red;
   }
 </style>
 
@@ -230,7 +244,6 @@
   <div class="main">
 
     <div class="what_before spacer">
-      .
     </div>
 
     <div class="what">
@@ -251,21 +264,37 @@
     <div class="spacer goblack"></div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
+
+    <div class="vertigo">
+      <p>
+      Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei giorni
+      la vita è stata risucchiata via dalle città nelle quali abitiamo. Le strade, vuote. Le piazze, vuote. Le stazioni, vuote. I parchi, vuoti. Pedoni, automobili, biciclette, autobus, tram, tutto è sparito.
+      </p><p>
+      Dal fondo dei nostri abitacoli personali per cinquantasei giorni abbiamo contemplato attraverso periscopi digitali la nostra stessa assenza. Abbiamo aspettato col fiato sospeso. Abbiamo scritto, disegnato, fotografato, sproloquiato. Siamo stati
+      impazienti, annoiati, irrequieti. Intimoriti, smarriti, alienati. Ma anche curiosi, eccitati, sereni, entusiasti. Abbiamo telefonato, messaggiato, videochiamato, rilasciato interviste, videoregistrato. Ci siamo confrontati e abbiamo messo tutto
+      in discussione. Abbiamo festeggiato compleanni e anniversari. Abbiamo osservato il mondo dalla finestra, guardando in modo nuovo lo spazio attorno a casa. Abbiamo conosciuto una città senza spazio pubblico. Abbiamo letto la diffidenza negli
+      sguardi degli sconosciuti. Abbiamo sentito cosa ci mancava davvero, e cosa non ci mancava per nulla.
+      </p><p>
+      Poi tutto è finito. Quello che credevamo un un periodo indimenticabile sta rapidamente svanendo nella memoria. I bordi si sfocano, i colori sbiadiscono.
+      Tra poco non resterà forse che un vago senso di nostalgia. Abbiamo raccolto testi, interviste, fotografie, disegni, collage.
+      vuoto ø / vertigo è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
+      </p>
+    </div>
 
     <div class="pics_container">
     </div>
-    <div class="spacer">
-    </div>
   </div>
   <div class="footer gowhite">
-        vuoto è un progetto di <br>orizzontale + atto
+    vuoto è un progetto di <br>orizzontale + atto
   </div>
 
 
   <script type="text/javascript">
+
+
+
+
+
     var scene = new ScrollMagic.Scene({
         triggerElement: '.main',
         offset: -200
@@ -317,17 +346,14 @@
     var scene = new ScrollMagic.Scene({
         triggerElement: '.what_after',
         duration: 0,
-        triggerHook: 0.35
+        triggerHook: 0
       })
       .setTween(gsap.timeline()
         .to('.line', {
           duration: 0.5,
           ease: "elastic.in(1, 0.75)",
-          x: '500%'
+          opacity: '0'
 
-        })
-        .set('.line', {
-          opacity: 0
         })
       )
       .addTo(controller)
@@ -351,18 +377,18 @@
       )
       .addTo(controller)
 
-      var scene = new ScrollMagic.Scene({
-          triggerElement: '.gowhite',
-          duration: 0,
-          triggerHook: 1
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.gowhite',
+        duration: 0,
+        triggerHook: 1
+      })
+      .setTween(gsap.timeline()
+        .to('html', {
+          duration: 1,
+          background: 'white'
         })
-        .setTween(gsap.timeline()
-          .to('html', {
-            duration: 1,
-            background: 'white'
-          })
-        )
-        .addTo(controller)
+      )
+      .addTo(controller)
 
 
 
@@ -386,41 +412,44 @@
 
     let createpics = function(pics) {
 
-          let container = document.querySelector('.pics_container');
-          let imagebox = document.createElement('div');
-          imagebox.classList.add("imagebox");
-          imagebox.style.height = durationPerPic + "px";
-          container.appendChild(imagebox);
+      let container = document.querySelector('.pics_container');
+      let imagebox = document.createElement('div');
+      imagebox.classList.add("imagebox");
+      imagebox.style.height = durationPerPic + "px";
+      container.appendChild(imagebox);
 
-          pics.forEach(function(el, idx) {
-            let img = document.createElement('img');
-            let myclass = "img" + idx;
-            console.log(myclass);
-            img.classList.add(myclass);
-            img.src = el;
-            imagebox.appendChild(img);
-            let div = document.createElement('div');
-            div.style.height = durationPerPic + "px";
-            container.appendChild(div);
+      pics.forEach(function(el, idx) {
+        let img = document.createElement('img');
+        let myclass = "img" + idx;
+        console.log(myclass);
+        img.classList.add(myclass);
+        img.src = el;
+        imagebox.appendChild(img);
+        let div = document.createElement('div');
+        div.style.height = durationPerPic + "px";
+        container.appendChild(div);
 
 
-            if (idx === 0) {
-              img.classList.add("alwaysactive");
-            }
-
-            new ScrollMagic.Scene({
-              triggerElement: div,
-              triggerHook: 0.4
-            })
-            .setClassToggle(img, "active")
-            .addTo(controller);
-
-          });
-          let duration = durationPerPic * pics.length;
-
+        if (idx === 0) {
+          img.classList.add("alwaysactive");
         }
 
-        createpics(images);
+        new ScrollMagic.Scene({
+            triggerElement: div,
+            triggerHook: 0.4
+          })
+          .setClassToggle(img, "active")
+          .addTo(controller);
+
+      });
+      let duration = durationPerPic * pics.length;
+
+    }
+
+    createpics(images);
+
+
+
   </script>
 
 
