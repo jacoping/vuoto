@@ -80,9 +80,15 @@
   .footer {
     color: black;
     padding: 10vmin;
-    font-size: 5vmin;
-    line-height: 0.8;
+    font-size: 4vw;
+    line-height: 1;
   }
+  @media (max-aspect-ratio: 3/4) {
+    .footer {
+      font-size: 7vw;
+    }
+  }
+
 
 
 
@@ -106,7 +112,15 @@
     opacity: 0.99;
   }
 
-  strong {
+  strong, a, a:visited, a:active {
+    color: #50e95d;
+  }
+  a,
+  a:visited,
+  a:active {
+    color: inherit;
+  }
+  a:hover {
     color: #50e95d;
   }
 
@@ -197,7 +211,7 @@
     width: 80vw;
     font-weight: 400;
     margin: 30vh auto 0;
-    font-size: 3vw;
+    font-size: 2.9vw;
   }
 
   .vertigo h2 {
@@ -210,7 +224,6 @@
   .vertigo p {
     font-size: 1em;
     margin-bottom: 2vh;
-    text-align: justify;
     hyphens: auto;
   }
 
@@ -375,7 +388,7 @@
 
   </div>
   <div class="footer gowhite">
-    vuoto è un progetto di <br>orizzontale + atto
+    vuoto è un progetto di <br><a target="_blaorizzontalenk" href="https://orizzontale.org">orizzontale</a> + <a target="_blank" href="https://atto.si">atto</a>
   </div>
 
 
