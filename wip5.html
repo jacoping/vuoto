@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
 
 </head>
@@ -106,6 +106,10 @@
     opacity: 0.99;
   }
 
+  strong {
+    color: #50e95d;
+  }
+
 
   /* stili logo */
   .logo-container {
@@ -116,17 +120,18 @@
     top: -4vh;
     font-weight: 500;
     font-family: Montserrat, sans-serif;
-    transition: line-height 1s, margin-top 1s, top 1s, opacity 1s;
+    transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
   }
 
   .logo-container.closed {
     line-height: .015;
-    top: 9vh;
+    top: 12vw;
   }
 
-  @media (min-aspect-ratio: 1/1) {
-    .logo-container {
+  /* logo per schermi orizzontali */
+  @media (min-aspect-ratio: 4/3) {
+    .logo-container.closed {
       font-size: 12.5vw;
       top: 7.5vw;
       margin-left: 20vw;
@@ -196,11 +201,31 @@
 
 
   .vertigo {
+    width: 80vw;
     margin-bottom: 30vh;
+    font-weight: 400;
   }
+
+  .vertigo h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 0.9;
+  }
+
   .vertigo p {
+    font-size: 3vw;
     margin-bottom: 2vh;
   }
+
+  .vertigo .self {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #50e95d;
+    text-transform: uppercase;
+  }
+
+
 
 
 
@@ -266,18 +291,28 @@
     <div class="spacer"></div>
 
     <div class="vertigo">
+      <h2>
+        <strong>VUOTO 1 </strong><br> VERTIGO
+      </h2>
       <p>
-      Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei giorni
-      la vita è stata risucchiata via dalle città nelle quali abitiamo. Le strade, vuote. Le piazze, vuote. Le stazioni, vuote. I parchi, vuoti. Pedoni, automobili, biciclette, autobus, tram, tutto è sparito.
-      </p><p>
-      Dal fondo dei nostri abitacoli personali per cinquantasei giorni abbiamo contemplato attraverso periscopi digitali la nostra stessa assenza. Abbiamo aspettato col fiato sospeso. Abbiamo scritto, disegnato, fotografato, sproloquiato. Siamo stati
-      impazienti, annoiati, irrequieti. Intimoriti, smarriti, alienati. Ma anche curiosi, eccitati, sereni, entusiasti. Abbiamo telefonato, messaggiato, videochiamato, rilasciato interviste, videoregistrato. Ci siamo confrontati e abbiamo messo tutto
-      in discussione. Abbiamo festeggiato compleanni e anniversari. Abbiamo osservato il mondo dalla finestra, guardando in modo nuovo lo spazio attorno a casa. Abbiamo conosciuto una città senza spazio pubblico. Abbiamo letto la diffidenza negli
-      sguardi degli sconosciuti. Abbiamo sentito cosa ci mancava davvero, e cosa non ci mancava per nulla.
-      </p><p>
-      Poi tutto è finito. Quello che credevamo un un periodo indimenticabile sta rapidamente svanendo nella memoria. I bordi si sfocano, i colori sbiadiscono.
-      Tra poco non resterà forse che un vago senso di nostalgia. Abbiamo raccolto testi, interviste, fotografie, disegni, collage.
-      vuoto ø / vertigo è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
+        Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei
+        giorni
+        la vita è stata risucchiata via dalle città nelle quali abitiamo. Le strade, vuote. Le piazze, vuote. Le stazioni, vuote. I parchi, vuoti. Pedoni, automobili, biciclette, autobus, tram, tutto è sparito.
+      </p>
+      <p>
+        Dal fondo dei nostri abitacoli personali per cinquantasei giorni abbiamo contemplato attraverso periscopi digitali la nostra stessa assenza. Abbiamo aspettato col fiato sospeso. Abbiamo scritto, disegnato, fotografato, sproloquiato. Siamo
+        stati
+        impazienti, annoiati, irrequieti. Intimoriti, smarriti, alienati. Ma anche curiosi, eccitati, sereni, entusiasti. Abbiamo telefonato, messaggiato, videochiamato, rilasciato interviste, videoregistrato. Ci siamo confrontati e abbiamo messo
+        tutto
+        in discussione. Abbiamo festeggiato compleanni e anniversari. Abbiamo osservato il mondo dalla finestra, guardando in modo nuovo lo spazio attorno a casa. Abbiamo conosciuto una città senza spazio pubblico. Abbiamo letto la diffidenza negli
+        sguardi degli sconosciuti. Abbiamo sentito cosa ci mancava davvero, e cosa non ci mancava per nulla.
+      </p>
+      <p>
+        Poi tutto è finito. Quello che credevamo un un periodo indimenticabile sta rapidamente svanendo nella memoria. I bordi si sfocano, i colori sbiadiscono.
+        Tra poco non resterà forse che un vago senso di nostalgia. Abbiamo raccolto testi, interviste, fotografie, disegni, collage.
+      </p>
+      <p>
+        <span class="self">vertigo</span> è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
       </p>
     </div>
 
@@ -290,11 +325,6 @@
 
 
   <script type="text/javascript">
-
-
-
-
-
     var scene = new ScrollMagic.Scene({
         triggerElement: '.main',
         offset: -200
@@ -447,9 +477,6 @@
     }
 
     createpics(images);
-
-
-
   </script>
 
 
