@@ -137,8 +137,7 @@
   }
 
   body,
-  .header,
-  .logo-container {
+  .header {
     background: inherit;
   }
 
