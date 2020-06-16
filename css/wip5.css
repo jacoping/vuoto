@@ -159,8 +159,9 @@
     height: 2.5vmin;
     margin-bottom: 50vmin;
     opacity: 0;
-    transition: opacity 0.6s ease-in-out;
     display: inline-block;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
   }
 
   .line span {
@@ -170,7 +171,10 @@
   }
 
   .visible {
-    opacity: 1
+    opacity: 1;
+  }
+  .hidden {
+    opacity: 0;
   }
 
   @media (max-aspect-ratio: 3/4) {
