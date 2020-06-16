@@ -47,7 +47,7 @@
 
   <div class="main">
 
-    <div class="what_before spacer"></div>
+    <div class="what_before spacer100"></div>
 
     <div class="what">
       <p class="line"><span>vuoto</span> <del>non</del> è un libro</p><br>
@@ -64,16 +64,16 @@
 
     <div class="closewhat"></div>
 
-    <div class="spacer"></div>
+    <div class="spacer100"></div>
 
     <div class="goblack"></div>
 
-    <div class="spacer"></div>
-    <div class="spacer"></div>
+    <div class="spacer100"></div>
+    <div class="spacer100"></div>
     <div class="pics_container"></div>
     <div class="vertigo">
       <h2>
-        <strong>VUOTO 1 </strong><br> VERTIGO
+        <strong>VUOTO 1 </strong><br> <span class="self">VERTIGO</span>
       </h2>
       <p>
         Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei
@@ -92,13 +92,17 @@
       <p>
         <span class="self">vertigo</span> è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
       </p>
+      <div class="getyourcopy">
+        <a target="_blank" href="">GET YOUR COPY</a>
+      </div>
     </div>
 
+    <div class="spacer20"></div>
     <div class="vacuum">
       <div class="pic"></div>
     </div>
 
-    <div class="spacer"></div>
+    <div class="spacer100"></div>
   </div>
   <div class="footer gowhite">
     vuoto è un progetto di <br><a target="_blank" href="https://orizzontale.org">orizzontale</a> + <a target="_blank" href="https://atto.si">atto</a>
@@ -131,21 +135,13 @@
           triggerElement: el,
           offset: offset,
           duration: duration,
-          triggerHook: 0.3
+          triggerHook: 0.4
         })
         .setPin(el, {
           pushFollowers: false
         })
         .addTo(controller)
-
-      var scene = new ScrollMagic.Scene({
-          triggerElement: el,
-          offset: offset,
-          triggerHook: 0.5
-        })
-        .setClassToggle(el, "visible")
-        .addTo(controller)
-    }
+      }
 
     let linesArray = document.querySelectorAll('.line');
     let lineHeight = document.querySelector('.line').clientHeight;
@@ -209,14 +205,13 @@
       "./pics/10.jpg",
     ];
 
-    durationPerPic = 400;
+    durationPerPic = "20vh";
 
     let createpics = function(pics) {
 
       let container = document.querySelector('.pics_container');
       let imagebox = document.createElement('div');
       imagebox.classList.add("imagebox");
-      imagebox.style.height = durationPerPic + "px";
       container.appendChild(imagebox);
 
       pics.forEach(function(el, idx) {
@@ -227,7 +222,7 @@
         img.src = el;
         imagebox.appendChild(img);
         let div = document.createElement('div');
-        div.style.height = durationPerPic + "px";
+        div.style.height = durationPerPic;
         container.appendChild(div);
 
 
