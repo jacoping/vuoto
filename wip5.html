@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="import" dir="ltr">
+<html lang="import" dir="ltr" class="blue">
 
 <head>
   <meta charset="utf-8">
@@ -82,6 +82,7 @@
     font-size: 4vw;
     line-height: 1;
   }
+
   @media (max-aspect-ratio: 3/4) {
     .footer {
       font-size: 7vw;
@@ -95,8 +96,19 @@
   /* COLORS */
 
   html {
+    transition: background-color 1s;
+  }
+
+  html.blue {
     background: #0f2486;
-    color: white;
+  }
+
+  html.black {
+    background: black;
+  }
+
+  html.white {
+    background: white;
   }
 
   .logo-container p {
@@ -111,14 +123,23 @@
     opacity: 0.99;
   }
 
-  strong, a, a:visited, a:active {
+  body {
+    color: white;
+  }
+
+  strong,
+  a,
+  a:visited,
+  a:active {
     color: #50e95d;
   }
+
   a,
   a:visited,
   a:active {
     color: inherit;
   }
+
   a:hover {
     color: #50e95d;
   }
@@ -145,7 +166,9 @@
     top: 0vw;
   }
 
-  body, .header, .logo-container {
+  body,
+  .header,
+  .logo-container {
     background: inherit;
   }
 
@@ -236,8 +259,9 @@
   .vacuum {
     margin-left: 40vw;
   }
+
   .vacuum .pic {
-    background-image:  url("./pics/vacuumcleaner.jpg");
+    background-image: url("./pics/vacuumcleaner.jpg");
     background-size: 50vw auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -280,6 +304,7 @@
       margin-top: 0;
       margin-left: 0;
     }
+
     .vacuum .pic {
       background-size: 28vw auto;
       width: 30vw;
@@ -298,7 +323,6 @@
   .debug div {
     border: 1px solid red;
   }
-
 </style>
 
 <body class="no-debug">
@@ -349,45 +373,38 @@
 
     <div class="what_after spacer">
     </div>
-    <div class="spacer goblack"></div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
+    <div class="goblack">
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="pics_container"></div>
+      <div class="vertigo">
+        <h2>
+          <strong>VUOTO 1 </strong><br> VERTIGO
+        </h2>
+        <p>
+          Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei giorni la vita è stata risucchiata via dalle città nelle quali abitiamo. Le strade, vuote. Le piazze, vuote. Le stazioni, vuote. I parchi, vuoti. Pedoni, automobili, biciclette, autobus, tram, tutto è sparito.
+        </p>
+        <p>
+          Dal fondo dei nostri abitacoli personali per cinquantasei giorni abbiamo contemplato attraverso periscopi digitali la nostra stessa assenza. Abbiamo aspettato col fiato sospeso. Abbiamo scritto, disegnato, fotografato, sproloquiato. Siamo stati impazienti, annoiati, irrequieti. Intimoriti, smarriti, alienati. Ma anche curiosi, eccitati, sereni, entusiasti. Abbiamo telefonato,  messaggiato, videochiamato, rilasciato interviste, videoregistrato. Ci siamo confrontati e abbiamo messo tutto in discussione. Abbiamo festeggiato compleanni e anniversari. Abbiamo osservato il mondo dalla finestra, guardando in modo nuovo lo spazio attorno a casa. Abbiamo conosciuto una città senza spazio pubblico. Abbiamo letto la diffidenza negli sguardi degli sconosciuti. Abbiamo sentito cosa ci mancava davvero, e cosa non ci mancava per nulla.
+        </p>
+        <p>
+          Poi tutto è finito. Quello che credevamo un un periodo indimenticabile sta rapidamente svanendo nella memoria. I bordi si sfocano, i colori sbiadiscono.
+          Tra poco non resterà forse che un vago senso di nostalgia. Abbiamo raccolto testi, interviste, fotografie, disegni, collage.
+        </p>
+        <p>
+          <span class="self">vertigo</span> è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
+        </p>
+      </div>
 
-    <div class="pics_container"></div>
-    <div class="vertigo">
-      <h2>
-        <strong>VUOTO 1 </strong><br> VERTIGO
-      </h2>
-      <p>
-        Vuoto è assenza di materia. È anche la condizione perché qualcosa possa muoversi. Il vuoto attrae: la vertigine e l’aspirapolvere hanno lo stesso principio di funzionamento. Dal nove marzo al quattro maggio duemilaventi per cinquantasei
-        giorni
-        la vita è stata risucchiata via dalle città nelle quali abitiamo. Le strade, vuote. Le piazze, vuote. Le stazioni, vuote. I parchi, vuoti. Pedoni, automobili, biciclette, autobus, tram, tutto è sparito.
-      </p>
-      <p>
-        Dal fondo dei nostri abitacoli personali per cinquantasei giorni abbiamo contemplato attraverso periscopi digitali la nostra stessa assenza. Abbiamo aspettato col fiato sospeso. Abbiamo scritto, disegnato, fotografato, sproloquiato. Siamo
-        stati
-        impazienti, annoiati, irrequieti. Intimoriti, smarriti, alienati. Ma anche curiosi, eccitati, sereni, entusiasti. Abbiamo telefonato, messaggiato, videochiamato, rilasciato interviste, videoregistrato. Ci siamo confrontati e abbiamo messo
-        tutto
-        in discussione. Abbiamo festeggiato compleanni e anniversari. Abbiamo osservato il mondo dalla finestra, guardando in modo nuovo lo spazio attorno a casa. Abbiamo conosciuto una città senza spazio pubblico. Abbiamo letto la diffidenza negli
-        sguardi degli sconosciuti. Abbiamo sentito cosa ci mancava davvero, e cosa non ci mancava per nulla.
-      </p>
-      <p>
-        Poi tutto è finito. Quello che credevamo un un periodo indimenticabile sta rapidamente svanendo nella memoria. I bordi si sfocano, i colori sbiadiscono.
-        Tra poco non resterà forse che un vago senso di nostalgia. Abbiamo raccolto testi, interviste, fotografie, disegni, collage.
-      </p>
-      <p>
-        <span class="self">vertigo</span> è il racconto/diario di queste settimane, per come le abbiamo vissute, individualmente e collettivamente.
-      </p>
-    </div>
-    
-    <div class="vacuum">
-      <div class="pic"></div>
-    </div>
+      <div class="vacuum">
+        <div class="pic"></div>
+      </div>
 
-    <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
   </div>
   <div class="footer gowhite">
-    vuoto è un progetto di <br><a target="_blaorizzontalenk" href="https://orizzontale.org">orizzontale</a> + <a target="_blank" href="https://atto.si">atto</a>
+    vuoto è un progetto di <br><a target="_blank" href="https://orizzontale.org">orizzontale</a> + <a target="_blank" href="https://atto.si">atto</a>
   </div>
 
 
@@ -466,12 +483,7 @@
         duration: 0,
         triggerHook: 0.35
       })
-      .setTween(gsap.timeline()
-        .to('html', {
-          duration: 1,
-          background: 'black'
-        })
-      )
+      .setClassToggle('html', 'black')
       .addTo(controller)
 
     var scene = new ScrollMagic.Scene({
@@ -479,12 +491,7 @@
         duration: 0,
         triggerHook: 1
       })
-      .setTween(gsap.timeline()
-        .to('html', {
-          duration: 1,
-          background: 'white'
-        })
-      )
+      .setClassToggle('html', 'white')
       .addTo(controller)
 
 
