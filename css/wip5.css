@@ -154,11 +154,7 @@
     opacity: 1;
   }
 
-  .line span {
-    font-variant: small-caps;
-    font-weight: 500;
-    display: none;
-  }
+
 
   .visible {
     opacity: 1;
@@ -166,6 +162,24 @@
   .hidden {
     opacity: 0;
   }
+
+  .line span.vuoto {
+    display: none;
+  }
+
+  del::before {
+    content:'';
+    position: absolute;
+    top: 0.63em;
+    width: 1.9em;
+    border-top: 0.25em solid white;
+  }
+
+
+
+
+
+
 
 
   /* styles for image scroller */
