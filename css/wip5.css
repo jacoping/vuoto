@@ -127,7 +127,6 @@
     transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
     z-index: 9;
-    background: blue;
     padding: 11vw 4vw;
   }
 
