@@ -1,3 +1,11 @@
+  @font-face {
+    font-family: "SangBleuEmpire-Medium";
+    src: url("/fonts/SangBleuEmpire-Medium-WebS.woff2") format("woff2"),
+         url("/fonts/SangBleuEmpire-Medium-WebS.woff") format("woff");
+  }
+
+
+
 
   /* richiesto da scrollmagic */
   html,
@@ -40,7 +48,7 @@
 
   .main,
   .footer {
-    font-family: 'Lora', serif;
+    font-family: SangBleuEmpire-Medium, serif;
     font-weight: 700;
   }
 
@@ -122,8 +130,10 @@
     font-size: 25.5vw;
     line-height: .42;
     top: -14vh;
-    font-weight: 500;
-    font-family: Montserrat, sans-serif;
+    font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: .1em;
+
     transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
     z-index: 9;
@@ -219,7 +229,7 @@
   }
 
   .vertigo h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: neue-haas-grotesk-display, sans-serif;
     font-size: 3em;
     font-weight: 300;
     line-height: 0.9;
@@ -237,13 +247,13 @@
   }
 
   .vertigo .self {
-    font-family: "Montserrat", sans-serif;
+    font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 300;
     text-transform: uppercase;
   }
 
   .getyourcopy {
-    font-family: "Montserrat", sans-serif;
+    font-family: neue-haas-grotesk-display, sans-serif;
     font-size: 9vw;
     font-weight: 700;
     transform: skewX(15deg);
