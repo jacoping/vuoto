@@ -46,12 +46,6 @@
     padding: 0 4vw;
   }
 
-  .main,
-  .footer {
-    font-family: SangBleuEmpire-Medium, serif;
-    font-weight: 700;
-  }
-
   .spacer100 {
     height: 100vh;
   }
@@ -76,8 +70,52 @@
 
 
 
+  /*
+  ███████  ██████  ███    ██ ████████ ███████
+  ██      ██    ██ ████   ██    ██    ██
+  █████   ██    ██ ██ ██  ██    ██    ███████
+  ██      ██    ██ ██  ██ ██    ██         ██
+  ██       ██████  ██   ████    ██    ███████
+  */
 
-  /* COLORS */
+
+  body {
+    font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
+  }
+
+  .vertigo {
+    letter-spacing: .05em;
+  }
+
+  .what,
+  .footer {
+    font-family: SangBleuEmpire-Medium, serif;
+    font-weight: 700;
+  }
+
+  .getyourcopy a {
+    font-family: SangBleuEmpire-Medium, serif;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  /*
+   ██████  ██████  ██       ██████  ██████  ███████
+  ██      ██    ██ ██      ██    ██ ██   ██ ██
+  ██      ██    ██ ██      ██    ██ ██████  ███████
+  ██      ██    ██ ██      ██    ██ ██   ██      ██
+   ██████  ██████  ███████  ██████  ██   ██ ███████
+  */
+
 
   html {
     transition: background-color 1s;
@@ -117,10 +155,6 @@
     color: inherit;
   }
 
-  a:hover,
-  .self {
-    color: #50e95d;
-  }
 
 
   /* stili logo */
@@ -128,12 +162,10 @@
     position: fixed;
     transform-origin: 50% 50%;
     font-size: 25.5vw;
-    line-height: .42;
+    line-height: .4;
     top: -14vh;
-    font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: .1em;
-
     transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
     z-index: 9;
@@ -176,11 +208,11 @@
   .line span.vuoto {
     display: none;
   }
-
+  /* striketrough su "non" */
   del::before {
     content:'';
     position: absolute;
-    top: 0.63em;
+    top: 0.7em;
     width: 1.9em;
     border-top: 0.25em solid white;
   }
@@ -229,39 +261,54 @@
   }
 
   .vertigo h2 {
-    font-family: neue-haas-grotesk-display, sans-serif;
     font-size: 3em;
     font-weight: 300;
     line-height: 0.9;
-    margin: 1em 0 0.3em;
+    margin-bottom: 0.3em;
   }
 
-  h2 strong {
-    font-weight: 700;
+  .issue-title {
+    font-weight: 600;
   }
 
   .vertigo p {
     font-size: 1em;
-    margin-bottom: 2vh;
     hyphens: auto;
+    text-align: justify;
   }
 
-  .vertigo .self {
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
+  .issue-number-in-text {
+    font-size: 0.8em;
   }
+
+  .issue-title-in-text {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+
+
 
   .getyourcopy {
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-size: 9vw;
+    text-align: center;
+  }
+
+  .getyourcopy a {
+    font-size: 14vw;
     font-weight: 700;
-    transform: skewX(15deg);
-    transition: transform 0.5s;
+    text-shadow: 10px 5px 10px #50e95d, 10px 5px 10px #50e95d;
+    line-height: 1.2;
   }
 
-  .getyourcopy:hover {
-    transform: skewX(-20deg);
+  .getyourcopy a:hover {
+    text-shadow: 0px 0px 10px white, 0px 0px 10px grey, 10px 5px 10px #50e95d, 10px 5px 20px #50e95d;
   }
 
 
@@ -270,9 +317,6 @@
 
 
 
-  .vacuum {
-    margin-left: 40vw;
-  }
 
   .vacuum .pic {
     background-image: url("/pics/vacuumcleaner.png");
@@ -282,6 +326,7 @@
     background-origin: center;
     width: 50vw;
     height: 100vw;
+    margin: 0 auto;
   }
 
 
@@ -320,6 +365,10 @@
       font-size: 1.8vw;
     }
 
+    .getyourcopy {
+      font-size: 5.5vw;
+    }
+
     .vacuum {
       margin-top: 0;
       margin-left: 0;
@@ -331,9 +380,7 @@
       height: 50vw;
     }
 
-    .getyourcopy {
-      font-size: 5.5vw;
-    }
+
   }
 
   @media (max-aspect-ratio: 3/4) {
