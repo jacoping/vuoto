@@ -56,15 +56,15 @@
   /* styles for footer */
   .footer {
     color: black;
-    padding: 10vmin;
-    font-size: 4vw;
+    padding: 4vw;
+    font-size: 6vw;
     line-height: 1;
   }
 
-  @media (max-aspect-ratio: 3/4) {
-    .footer {
-      font-size: 7vw;
-    }
+
+
+  .disclaimer-link {
+    float: right;
   }
 
 
@@ -154,6 +154,12 @@
   a:active {
     color: inherit;
   }
+
+  .footer a:hover {
+    color: #50e95d;
+  }
+
+
 
 
 
@@ -378,6 +384,10 @@
       background-size: 28vw auto;
       width: 30vw;
       height: 50vw;
+    }
+
+    .footer {
+      font-size: 4vw;
     }
 
 
