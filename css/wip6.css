@@ -39,7 +39,6 @@
     display: flex;
     width: 100vw;
     height: 900px;
-    justify-content: center;
   }
 
   .main {
@@ -167,7 +166,7 @@
   .logo-container {
     position: fixed;
     transform-origin: 50% 50%;
-    font-size: 25.5vw;
+    font-size: 25vw;
     line-height: .4;
     top: -14vh;
     font-weight: 500;
@@ -340,14 +339,13 @@
 
   /* per schermi orizzontali */
   @media (min-aspect-ratio: 4/3) {
-    .header {
-      justify-content: flex-end;
-    }
+
     .logo-container.closed {
       font-size: 12.5vw;
       top: 2.5vw;
-      padding: 5vw 3vw;
+      padding: 5vw 0;
       transform: translateX(-5vw);
+      right: 0;
     }
     .pics_container {
       margin-bottom: 40vw;
