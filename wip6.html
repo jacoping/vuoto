@@ -51,18 +51,24 @@
 
     <div class="what_before spacer100"></div>
 
+
+
     <div class="what">
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> è un libro</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> è un magazine</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> è un libro d’artista</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> è un journal</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> è una fanzine</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> ha un piano annuale</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> ha un tema</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> ha un formato</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> <span class="barrato"><del>non</del></span> ha una redazione</p><br>
-      <p class="line"><span class="vuoto">vuoto</span> non è vuoto</p>
+      <p class="line"><span class="barrato"><del>non</del></span> è un libro</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> è un magazine</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> è un libro d’artista</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> è un journal</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> è una fanzine</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> ha un piano annuale</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> ha un tema</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> ha un formato</p><br>
+      <p class="line"><span class="barrato"><del>non</del></span> ha una redazione</p><br>
+      <p class="line">non è vuoto</p><br>
+      <p class="line"></p>
     </div>
+
+
+
 
     <div class="closewhat"></div>
 
@@ -157,7 +163,7 @@
       <a target="_blank" href="https://orizzontale.org">orizzontale</a> + <a target="_blank" href="https://atto.si">atto</a>
       <br>
       <br>
-      scrivici: 
+      scrivici:
       <a target="_blank" href="">ciao@vuoto.xyz<a/>
     </div>
   </div>
@@ -178,47 +184,6 @@
       .setClassToggle(".logo-container", "closed")
       .triggerHook(.5)
       .addTo(controller)
-
-
-
-
-    // INGRESSO WHAT
-
-    let setPin = function(el, offset, duration) {
-      var scene = new ScrollMagic.Scene({
-          triggerElement: el,
-          offset: offset,
-          duration: duration,
-          triggerHook: 0.4
-        })
-        .setPin(el, {
-          pushFollowers: false
-        })
-        .addTo(controller)
-      }
-
-    let linesArray = document.querySelectorAll('.line');
-    let lineHeight = document.querySelector('.line').clientHeight;
-    let margin = parseInt(getComputedStyle(document.querySelector('.line')).marginBottom);
-    let duration = (lineHeight + margin) * 20;
-    let offset = 0;
-    linesArray.forEach(function(el, idx) {
-      setPin(el, offset, duration);
-      offset = offset - (lineHeight * 2);
-    })
-
-
-
-    // USCITA WHAT
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '.closewhat',
-        duration: 0,
-        triggerHook: 0
-      })
-      .setClassToggle('.line', 'hidden')
-      .addTo(controller)
-
 
 
 

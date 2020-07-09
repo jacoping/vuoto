@@ -196,12 +196,9 @@
     height: 2.5vmin;
     margin-bottom: 50vmin;
     opacity: 0;
-    display: inline-block;
     transition: opacity 0.6s ease-in-out;
     opacity: 1;
   }
-
-
 
   .visible {
     opacity: 1;
@@ -210,19 +207,33 @@
     opacity: 0;
   }
 
-  .line span.vuoto {
-    display: none;
+  .what p {
+    position: sticky;
+    top: 40vh;
   }
+
+  .what p:nth-child(1)  {padding-top: 1em;}
+  .what p:nth-child(3)  {padding-top: 2em;}
+  .what p:nth-child(5)  {padding-top: 3em;}
+  .what p:nth-child(7)  {padding-top: 4em;}
+  .what p:nth-child(9)  {padding-top: 5em;}
+  .what p:nth-child(11) {padding-top: 6em;}
+  .what p:nth-child(13) {padding-top: 7em;}
+  .what p:nth-child(15) {padding-top: 8em;}
+  .what p:nth-child(17) {padding-top: 9em;}
+  .what p:nth-child(19) {padding-top: 10em;}
+  .what p:nth-child(21) {padding-top: 11em;}
+
   /* striketrough su "non" */
+  /*
   del::before {
     content:'';
     position: absolute;
-    top: 0.7em;
+    top: 2em;
     width: 1.9em;
     border-top: 0.25em solid white;
   }
-
-
+  */
 
 
 
