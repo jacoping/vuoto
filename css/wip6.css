@@ -121,7 +121,7 @@
   }
 
   html.blue {
-    background: #0f2486;
+    background: #8d08f7;
   }
 
   html.black {
@@ -166,20 +166,20 @@
   .logo-container {
     position: fixed;
     transform-origin: 50% 50%;
-    font-size: 25vw;
+    font-size: 25.2vw;
     line-height: .4;
     top: -14vh;
+    right: 0vw;
     font-weight: 500;
     letter-spacing: .1em;
-    transition: line-height 1s, margin-top 1s, top 1s, opacity 1s, font-size 1s, margin-left 1s;
+    transition: line-height 1s, margin-top 1s, top 1s, right 1s, opacity 1s, font-size 1s, margin-left 1s;
     opacity: 1;
     z-index: 9;
-    padding: 11vw 4vw;
   }
 
   .logo-container.closed {
     line-height: .015;
-    top: 0vw;
+    top: 11vw;
   }
 
   body,
@@ -279,7 +279,6 @@
   .vertigo p {
     font-size: 1em;
     hyphens: auto;
-    text-align: justify;
   }
 
   .issue-number-in-text {
@@ -341,35 +340,39 @@
   @media (min-aspect-ratio: 4/3) {
 
     .logo-container.closed {
-      font-size: 12.5vw;
+      font-size: 10.5vw;
       top: 2.5vw;
       padding: 5vw 0;
       transform: translateX(-5vw);
       right: 0;
     }
+
+    .main {
+      width: 50vw;
+    }
+
     .pics_container {
       margin-bottom: 40vw;
       }
 
     .pics_container img {
-      width: auto;
-      height: 60vh;
+      width: 100%;
       left: 0;
       transform: translateX(0);
     }
 
     .imagebox {
-      top: 35vh;
+      top: 20vh;
     }
 
     .vertigo {
-      width: 50vw;
+      width: 100%;
       font-weight: 400;
-      margin: 0 0 0 40vw;
+      margin: 0vw;
       font-size: 1.8vw;
     }
 
-    .getyourcopy {
+    .getyourcopy a {
       font-size: 5.5vw;
     }
 
