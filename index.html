@@ -11,11 +11,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
 
   <link rel="stylesheet" href="https://use.typekit.net/skj1zoz.css">
+
+  <style media="screen">
+  </style>
+
   <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
 <body>
+
+
 
 
   <div class="header">
@@ -48,8 +54,6 @@
 
     <div class="what_before spacer100"></div>
 
-
-
     <div class="what">
       <p class="line"><span class="barrato"><del>non</del></span> è un libro</p><br>
       <p class="line"><span class="barrato"><del>non</del></span> è un magazine</p><br>
@@ -64,10 +68,17 @@
       <p class="line"></p>
     </div>
 
+    <div class="spacer100"></div>
 
-
-
-    <div class="closewhat"></div>
+    <div class="what2">
+      <p> vuoto è uno spazio pubblico transmediale nato per ospitare</p>
+      <ul>
+        <li>indagini collettive sulla città come sistema instabile</li>
+        <li>riflessioni pubbliche sull’imprevedibilità come paradigma</li>
+        <li>produzioni di paesaggi fisici e cognitivi fondati sull’idea dell’inatteso</li>
+        <li>ricerche di modalità non deterministiche di intervento sull’urbano</li>
+      </ul>
+    </div>
 
     <div class="spacer100"></div>
 
@@ -312,7 +323,26 @@
 
 
 
+    // CAMBIA COLORI INIZIALI
 
+    let style = document.querySelector('style');
+
+    let couples = [
+      "html.blue {background: #8d08f7;}.logo-container p {color: #50e95d;}", //juan
+      "html.blue {background: rgb(12,128,126);}.logo-container p {color: rgb(230, 83, 124);}", //riso birthday
+      "html.blue {background: rgb(12,128,126);}.logo-container p {color: rgb(248,231,28);}", //riso 2
+      "html.blue {background: #7FFF00;}.logo-container p {color: #8A2BE2;}", //ufogreen protonpurple
+      "html.blue {background: #E419FF;}.logo-container p {color: #7FFF00;}", //ufogreen adobe
+    ]
+
+    var couple = couples[Math.floor(Math.random() * couples.length)];
+    console.log(couple);
+
+    let changecolors = function() {
+      style.innerHTML = couple;
+    }
+
+    changecolors();
 
 
   </script>
