@@ -100,6 +100,10 @@
     font-size: 6vmin;
   }
 
+  .description p {
+    font-size: 4.5vw;
+  }
+
   .getyourcopy a {
     font-family: SangBleuEmpire-Medium, serif;
   }
@@ -219,7 +223,7 @@
 
   .what p {
     position: sticky;
-    top: 40vh;
+    top: 30vh;
   }
 
   .what p:nth-child(1)  {padding-top: 1em;}
@@ -259,7 +263,7 @@
     list-style-type: none;
   }
 
-  .what2 ul {
+  .what2 {
     padding-left: 1em;
   }
 
@@ -270,14 +274,10 @@
 
 
   /* styles for image scroller */
-  .pics_container {
-    margin-bottom: 70vw;
-  }
-
   .pics_container img {
     position: absolute;
     opacity: 0;
-    width: 80vw;
+    width: 100%;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
@@ -299,10 +299,8 @@
 
 
   .vertigo {
-    width: 80vw;
     font-weight: 300;
-    margin: 0 auto 0;
-    font-size: 2.9vw;
+    margin: 0 auto;
   }
 
   .vertigo h2 {
@@ -317,7 +315,6 @@
   }
 
   .vertigo p {
-    font-size: 1em;
     hyphens: auto;
   }
 
@@ -348,10 +345,12 @@
   }
 
   .int {
+    width: 100%;
     position: absolute;
     top: 0px;
     line-height: 1.2;
     transition: 1s;
+    font-size: 14vw;
   }
 
   .int:nth-child(1) {
@@ -382,14 +381,6 @@
     transform: translateY(-.45em);
   }
 
-
-  .getyourcopy a {
-    font-size: 14vw;
-    font-weight: 400;
-    line-height: 1.2;
-    text-decoration: none;
-  }
-
   .plain {
     transform: rotateX(0deg);
   }
@@ -405,16 +396,28 @@
 
 
 
-  .vacuum .pic {
-    background-image: url("/pics/vacuumcleaner.png");
-    background-size: 50vw auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-origin: center;
-    width: 50vw;
-    height: 100vw;
-    margin: 0 auto;
+
+  /* per schermi quadratozzi */
+  @media (min-aspect-ratio: 3/4) {
+
+    .description {
+      column-count: 2;
+    }
+
+    .description p {
+      font-size: 1.9vw;
+    }
+
+    .pics_container {
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    .footer {
+      font-size: 4vmin;
+    }
   }
+
 
 
 
@@ -438,56 +441,39 @@
       top: 20vh;
     }
 
-    .pics_container {
-      margin-bottom: 40vw;
+    .imagebox {
+      top: 30vh;
+    }
+
+    .vertigo {
+      width: 100%;
+      font-weight: 400;
+      margin: 0;
       }
 
-    .pics_container img {
-      width: 100%;
-      left: 0;
-      transform: translateX(0);
+    .description p {
+      font-size: 1.1vw;
     }
+
+    .pics_container {
+      width: 100%;
+    }
+
+    .int {
+      font-size: 6.5vw;
+    }
+
+  }
+
+
+
+  /* per schermi molto orizzontali */
+  @media (min-aspect-ratio: 6/3) {
 
     .imagebox {
       top: 20vh;
     }
 
-    .vertigo {
-      width: 80%;
-      font-weight: 400;
-      margin: 0vw;
-      font-size: 1.3vw;
-    }
-
-    .getyourcopy a {
-      font-size: 5.5vw;
-    }
-
-    .vacuum {
-      margin-top: 0;
-      margin-left: 0;
-    }
-
-    .vacuum .pic {
-      background-size: 28vw auto;
-      width: 30vw;
-      height: 50vw;
-    }
-
-    .footer {
-      font-size: 4vw;
-    }
-
-
-  }
-
-  @media (max-aspect-ratio: 3/4) {
-    .line {
-      height: 4vw;
-    }
-    .vertigo p {
-      font-size: 4.5vw;
-    }
   }
 
 
