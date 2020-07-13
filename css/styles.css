@@ -398,7 +398,8 @@
 
 
   /* per schermi quadratozzi */
-  @media (min-aspect-ratio: 3/4) {
+  /* è necessario mettere 3.1 per matchare l'ipad verticale */
+  @media (min-aspect-ratio: 3.1/4) {
 
     .description {
       column-count: 2;
