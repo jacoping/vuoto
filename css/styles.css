@@ -100,7 +100,7 @@
     font-size: 6vmin;
   }
 
-  .description p {
+  .description {
     font-size: 4.5vw;
   }
 
@@ -304,7 +304,7 @@
   }
 
   .vertigo h2 {
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: 300;
     line-height: 0.9;
     margin-bottom: 0.3em;
@@ -399,13 +399,14 @@
 
   /* per schermi quadratozzi */
   /* è necessario mettere 3.1 per matchare l'ipad verticale */
-  @media (min-aspect-ratio: 3.1/4) {
-
-    .description {
-      column-count: 2;
-    }
+  @media (min-aspect-ratio: 4/5) {
 
     .description p {
+      column-count: 2;
+      break-inside: avoid-column;
+    }
+
+    .description {
       font-size: 1.9vw;
     }
 
@@ -452,7 +453,7 @@
       margin: 0;
       }
 
-    .description p {
+    .description {
       font-size: 1.1vw;
     }
 
