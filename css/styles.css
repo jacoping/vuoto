@@ -104,7 +104,7 @@
     font-size: 4.5vw;
   }
 
-  #getyourcopy {
+  .acquista {
     font-family: SangBleuEmpire-Medium, serif;
   }
 
@@ -334,23 +334,27 @@
 
 
 
-
-
-
   #getyourcopy {
     text-align: center;
     position: relative;
-    transform: rotateX(60deg);
     transition: 1s;
+    font-size: 14vw;
+  }
+
+  .pre-acquista {
+    padding-top: 3em;
+  }
+
+  .acquista {
+    transform: rotateX(60deg);
   }
 
   .int {
     width: 100%;
     position: absolute;
-    top: 40vh;
+    top: 0;
     line-height: 1.2;
     transition: 1s;
-    font-size: 14vw;
   }
 
   .int:nth-child(1) {
@@ -381,21 +385,16 @@
     transform: translateY(-.45em);
   }
 
-  .plain {
-    transform: rotateX(0deg);
+  .pre-network {
+    padding-top: 2em;
   }
 
-  .plain .int {
-    transform: translateY(0);
-  }
-
-
-  #network {
+  .network {
+    font-size: 16px;
     text-align: center;
-    margin-top: 8em;
   }
 
-  #network h2 {
+  .network h2 {
     font-size: 1.5em;
     margin-top: 1em;
   }
@@ -421,14 +420,6 @@
     .pics_container {
       width: 65%;
       margin: 0 auto;
-    }
-
-    .int {
-      top: 20vh;
-    }
-
-    #network {
-      font-size: .8em;
     }
 
     .footer {
@@ -477,7 +468,7 @@
       width: 100%;
     }
 
-    .int {
+    #getyourcopy {
       font-size: 6.5vw;
     }
 
