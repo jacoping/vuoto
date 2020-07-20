@@ -84,19 +84,19 @@
     font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
   }
 
-  .vertigo {
+  #vertigo {
     letter-spacing: .04em;
   }
 
-  .what,
-  .what2,
-  .footer {
+  #what,
+  #what2,
+  #footer {
     font-family: SangBleuEmpire-Medium, serif;
     font-weight: 700;
   }
 
-  .what,
-  .what2 {
+  #what,
+  #what2 {
     font-size: 6vmin;
   }
 
@@ -104,7 +104,7 @@
     font-size: 4.5vw;
   }
 
-  .getyourcopy a {
+  #getyourcopy {
     font-family: SangBleuEmpire-Medium, serif;
   }
 
@@ -221,22 +221,22 @@
     opacity: 0;
   }
 
-  .what p {
+  #what p {
     position: sticky;
     top: 30vh;
   }
 
-  .what p:nth-child(1)  {padding-top: 1em;}
-  .what p:nth-child(3)  {padding-top: 2em;}
-  .what p:nth-child(5)  {padding-top: 3em;}
-  .what p:nth-child(7)  {padding-top: 4em;}
-  .what p:nth-child(9)  {padding-top: 5em;}
-  .what p:nth-child(11) {padding-top: 6em;}
-  .what p:nth-child(13) {padding-top: 7em;}
-  .what p:nth-child(15) {padding-top: 8em;}
-  .what p:nth-child(17) {padding-top: 9em;}
-  .what p:nth-child(19) {padding-top: 10em;}
-  .what p:nth-child(21) {padding-top: 11em;}
+  #what p:nth-child(1)  {padding-top: 1em;}
+  #what p:nth-child(3)  {padding-top: 2em;}
+  #what p:nth-child(5)  {padding-top: 3em;}
+  #what p:nth-child(7)  {padding-top: 4em;}
+  #what p:nth-child(9)  {padding-top: 5em;}
+  #what p:nth-child(11) {padding-top: 6em;}
+  #what p:nth-child(13) {padding-top: 7em;}
+  #what p:nth-child(15) {padding-top: 8em;}
+  #what p:nth-child(17) {padding-top: 9em;}
+  #what p:nth-child(19) {padding-top: 10em;}
+  #what p:nth-child(21) {padding-top: 11em;}
 
   /* striketrough su "non" */
   /*
@@ -250,20 +250,20 @@
   */
 
 
-  .what2 {
+  #what2 {
     line-height: 1;
   }
-  .what2 p,
-  .what2 li {
+  #what2 p,
+  #what2 li {
     width: 60%;
   }
 
-  .what2 li {
+  #what2 li {
     margin-top: .4em;
     list-style-type: none;
   }
 
-  .what2 {
+  #what2 {
     padding-left: 1em;
   }
 
@@ -298,12 +298,12 @@
 
 
 
-  .vertigo {
+  #vertigo {
     font-weight: 300;
     margin: 0 auto;
   }
 
-  .vertigo h2 {
+  #vertigo h2 {
     font-size: 1.5em;
     font-weight: 300;
     line-height: 0.9;
@@ -314,7 +314,7 @@
     font-weight: 600;
   }
 
-  .vertigo p {
+  #vertigo p {
     hyphens: auto;
   }
 
@@ -337,7 +337,7 @@
 
 
 
-  .getyourcopy {
+  #getyourcopy {
     text-align: center;
     position: relative;
     transform: rotateX(60deg);
@@ -347,7 +347,7 @@
   .int {
     width: 100%;
     position: absolute;
-    top: 0px;
+    top: 40vh;
     line-height: 1.2;
     transition: 1s;
     font-size: 14vw;
@@ -390,7 +390,15 @@
   }
 
 
+  #network {
+    text-align: center;
+    margin-top: 8em;
+  }
 
+  #network h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
 
 
 
@@ -413,6 +421,14 @@
     .pics_container {
       width: 65%;
       margin: 0 auto;
+    }
+
+    .int {
+      top: 20vh;
+    }
+
+    #network {
+      font-size: .8em;
     }
 
     .footer {
@@ -439,7 +455,7 @@
       width: 50vw;
     }
 
-    .what p {
+    #what p {
       top: 20vh;
     }
 
@@ -447,7 +463,7 @@
       top: 30vh;
     }
 
-    .vertigo {
+    #vertigo {
       width: 100%;
       font-weight: 400;
       margin: 0;

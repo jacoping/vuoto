@@ -19,13 +19,15 @@
 
 </head>
 
-<body class="">
+<body class="nodebug">
 
 
 
 
   <div class="header">
     <div class="logo-container">
+      <p>VUOTO</p>
+      <p>VUOTO</p>
       <p>VUOTO</p>
       <p>VUOTO</p>
       <p>VUOTO</p>
@@ -54,7 +56,7 @@
 
     <div class="what_before spacer100"></div>
 
-    <div class="what">
+    <div id="what">
       <p class="line"><span class="barrato"><del>non</del></span> è un libro</p><br>
       <p class="line"><span class="barrato"><del>non</del></span> è un magazine</p><br>
       <p class="line"><span class="barrato"><del>non</del></span> è un libro d’artista</p><br>
@@ -70,7 +72,7 @@
 
     <div class="spacer100"></div>
 
-    <div class="what2">
+    <div id="what2">
       <p> vuoto è uno spazio pubblico transmediale nato per ospitare</p>
       <ul>
         <li>indagini collettive sulla città come sistema instabile</li>
@@ -85,7 +87,7 @@
     <div class="goblack"></div>
 
     <div class="spacer100"></div>
-    <div class="vertigo">
+    <div id="vertigo">
       <div class="description">
         <h2>
           <span class="issue-number">
@@ -144,9 +146,11 @@
           fotografie, disegni, collage.
           <br>
           <br>
-          <span class="issue-number-in-text"> VUOTO 1 / </span><span class="issue-title-in-text"> VERTIGO </span> è il racconto/diario di queste
-          settimane, per come le abbiamo vissute,
-          individualmente e collettivamente.
+          <div class="tail">
+            <span class="issue-number-in-text"> VUOTO 1 / </span><span class="issue-title-in-text"> VERTIGO </span> è il racconto/diario di queste
+            settimane, per come le abbiamo vissute,
+            individualmente e collettivamente.
+          </div>
         </p>
       </div>
       <div class="spacer100"></div>
@@ -154,8 +158,7 @@
       <div class="spacer100"></div>
       <div class="spacer100"></div>
     </div>
-    <div class="getyourcopy">
-        <a target="_blank" href="network">
+    <div id="getyourcopy">
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
@@ -165,7 +168,27 @@
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
           <div class="int"> ACQUISTA<br> UNA<br> COPIA </div>
-        </a>
+    </div>
+
+    <div class="spacer20"></div>
+
+    <div id="network">
+      <h2> <a target="_blank" href="https://leporello-books.com">leporello</a></h2>
+      <p> Via del Pigneto 162/e <br> 00176 Roma</p>
+      <p class="links"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-1-vertigo/">ordina online</a></p>
+
+      <h2><a target="_blank" href="https://www.spaziobk.com/">spazio b**k</a></h2>
+      <p> Via Porro Lambertenghi 20 <br> 20159 Milano</p>
+      <p class="links"><a href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">ordina online</a></p>
+
+      <h2><a target="_blank" href="https://www.noilibreria.it/">noi libreria</a></h2>
+      <p>Via delle Leghe 18 <br> 20127 Milano</p>
+
+      <h2><a target="_blank" href="https://www.emergenzeweb.it/edicola-518/">edicola 518</a></h2>
+      <p>Via Sant'Ercolano 42 <br> 06121 Perugia</p>
+
+      <h2><a target="_blank" href="https://www.facebook.com/PerdiTempobarNapoli/">perditempo</a></h2>
+      <p>Via S. Pietro a Maiella 8 <br> 800138 Napoli</p>
     </div>
 
     <!--
@@ -174,6 +197,8 @@
       <div class="pic"></div>
     </div>
     -->
+
+
 
     <div class="spacer100"></div>
   </div>
@@ -370,6 +395,7 @@
 
     // EFFETTO GETYOURCOPY
 
+    /*
     var scene = new ScrollMagic.Scene({
         triggerElement: '.getyourcopy',
         triggerHook: .5,
@@ -377,6 +403,8 @@
       })
       .setClassToggle('.getyourcopy', 'plain')
       .addTo(controller)
+    */
+
 
 
 
@@ -385,11 +413,11 @@
     let style = document.querySelector('style');
 
     let couples = [
-      "html.blue {background: #8d08f7;}.logo-container p {color: #50e95d;}", //juan
-      "html.blue {background: rgb(12,128,126);}.logo-container p {color: rgb(255, 110, 225);}", //riso birthday
-      "html.blue {background: rgb(12,128,126);}.logo-container p {color: rgb(248,231,28);}", //riso 2
-      "html.blue {background: #7FFF00;}.logo-container p {color: #8A2BE2;}", //ufogreen protonpurple
-      "html.blue {background: #E419FF;}.logo-container p {color: #7FFF00;}", //ufogreen adobe
+      "html.blue {background: #8d08f7;}            .logo-container p, .links {color: #50e95d;}", //juan
+      "html.blue {background: rgb(12,128,126);}    .logo-container p, .links {color: rgb(255, 110, 225);}", //riso birthday
+      "html.blue {background: rgb(12,128,126);}    .logo-container p, .links {color: rgb(248,231,28);}", //riso 2
+      "html.blue {background: #7FFF00;}            .logo-container p, .links {color: #8A2BE2;}", //ufogreen protonpurple
+      "html.blue {background: #E419FF;}            .logo-container p, .links {color: #7FFF00;}", //ufogreen adobe
     ]
 
     var couple = couples[Math.floor(Math.random() * couples.length)];
@@ -401,9 +429,7 @@
 
     changecolors();
 
-
   </script>
-
 
 
 </body>
