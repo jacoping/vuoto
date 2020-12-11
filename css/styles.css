@@ -62,8 +62,6 @@
     line-height: 1;
   }
 
-
-
   .disclaimer-link {
     float: right;
   }
@@ -102,6 +100,10 @@
 
   .description {
     font-size: 4.5vw;
+  }
+
+  .network h3 {
+    font-family: SangBleuEmpire-Medium, serif;
   }
 
   .acquista {
@@ -327,6 +329,11 @@
     font-weight: 600;
   }
 
+  .link-to-bookshops a {
+    font-size: 2em;
+    text-decoration: none;
+  }
+
 
 
 
@@ -394,10 +401,77 @@
     text-align: center;
   }
 
-  .network h2 {
-    font-size: 1.5em;
+  .network p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .network h2.cities {
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .network h3 {
+    font-size: 1.2em;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+  }
+
+  .network h3.online {
     margin-top: 1em;
   }
+
+  .network h2.sections {
+    font-size: 2em;
+    margin-top: 2em;
+  }
+
+  .links {
+    margin-top: .5em;
+    font-weight: 600;
+  }
+
+  .links a {
+    text-decoration: none;
+  }
+
+  .links::before {
+    content: "";
+  }
+
+  .soldout a {
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  .soldout::after {
+    font-weight: 400;
+    margin-left: 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-size: 0.8em;
+    content: "SOLDOUT";
+    background-color: white;
+    color: black;
+  }
+
+  .soldout::before {
+    font-weight: 400;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-size: 0.8em;
+    content: "SOLDOUT";
+    background-color: transparent;
+    color: transparent;
+  }
+
+
+
+
 
 
 

@@ -10,6 +10,7 @@
   <script src="/js/gsap.min.js"></script>
   <script src="/js/ScrollMagic.js"></script>
   <script src="/js/animation.gsap.js"></script>
+  <script src="/js/vue.js"></script>
 
   <link rel="stylesheet" href="https://use.typekit.net/skj1zoz.css">
 
@@ -112,11 +113,15 @@
           Nel frattempo molte amministrazioni si sono lanciate in sperimentazioni reali e quelle che si erano già affacciate su questi temi, come Barcellona, Milano o Parigi, hanno drasticamente accelerato i loro tempi di lavoro.
           <br>
           <br>
-          Questa improvvisa accelerazione non può mancare di porre degli interrogativi. Stiamo assistendo ad una svolta nel modo di pensare i processi di trasformazione, viene da chiedersi, o è solo un momento di passaggio? Si sta consolidando in questa dialettica un nuovo modo di fare città? La pianificazione territoriale tradizionale e la sua staticità sono modelli ancora sostenibili? Dopo l’esperienza del COVID 19 e i conseguenti piani adattivi, è evidente che la città contemporanea debba maturare strumenti e programmi per rispondere rapidamente ad eventi improvvisi. Questo costante rapporto con l’inatteso può essere il futuro dell’urbanistica? Può la città essere costruita da tanti piccoli piccoli gesti, anche inaspettati? Questi gesti possono davvero aprire la possibilità ad enormi trasformazioni?
+          Questa improvvisa accelerazione non può mancare di porre degli interrogativi. Stiamo assistendo ad una svolta nel modo di pensare i processi di trasformazione, viene da chiedersi, o è solo un momento di passaggio? Si sta consolidando in
+          questa dialettica un nuovo modo di fare città? La pianificazione territoriale tradizionale e la sua staticità sono modelli ancora sostenibili? Dopo l’esperienza del COVID 19 e i conseguenti piani adattivi, è evidente che la città
+          contemporanea debba maturare strumenti e programmi per rispondere rapidamente ad eventi improvvisi. Questo costante rapporto con l’inatteso può essere il futuro dell’urbanistica? Può la città essere costruita da tanti piccoli piccoli gesti,
+          anche inaspettati? Questi gesti possono davvero aprire la possibilità ad enormi trasformazioni?
           <br>
           <br>
           <div class="tail">
-            <span class="issue-number-in-text"> VUOTO 2 / </span><span class="issue-title-in-text"> CONTROVERSO </span> raccoglie contributi da architetti, artisti, ricercatori con l’obiettivo di aprire un dibattito su questi temi. Un dialogo che sarà sempre in continuo divenire, così come lo è la costruzione della città stessa.
+            <span class="issue-number-in-text"> VUOTO 2 / </span><span class="issue-title-in-text"> CONTROVERSO </span> raccoglie contributi da architetti, artisti, ricercatori con l’obiettivo di aprire un dibattito su questi temi. Un dialogo che
+            sarà sempre in continuo divenire, così come lo è la costruzione della città stessa.
           </div>
         </p>
       </div>
@@ -216,82 +221,126 @@
       <div class="network">
 
 
-        <h2><a target="_blank" href="https://www.corraini.com/it/librerie/corraini-mambo-artbookshop.html">corraini mambo</a></h2>
-        <p>Via Don Minzoni 14 <br> 40121 Bologna</p>
 
-        <h2><a target="_blank" href="https://todomodo.org/">todo modo</a></h2>
-        <p>Via dei Fossi 15 rosso <br> 50123 Firenze</p>
+        <div id="app">
+          <h2 class="sections">ONLINE</h2>
 
-        <h2><a target="_blank" href="https://corraini.com/it/librerie/galleria-corraini.html">galleria corraini</a></h2>
-        <p>Via Ippolito Nievo 7a <br> 46100 Mantova</p>
+          <h3 class="online">leporello</h3>
+          <p class="links soldout"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-1-vertigo/"> VUOTO 1 / VERTIGO</a></p>
+          <p class="links"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-2-controverso/"> VUOTO 2 / CONTROVERSO </a></p>
 
-        <h2><a target="_blank" href="https://www.spaziobk.com/">spazio b**k</a></h2>
-        <p> Via Porro Lambertenghi 20 <br> 20159 Milano</p>
-        <p class="links soldout"> <a href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">ordina online vuoto #1</a></p>
+          <h3 class="online">spazio b**k</h3>
+          <p class="links soldout"> <a href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">VUOTO 1 / VERTIGO</a></p>
 
-        <h2><a target="_blank" href="https://www.noilibreria.it/">noi libreria</a></h2>
-        <p>Via delle Leghe 18 <br> 20127 Milano</p>
-
-        <h2><a target="_blank" href="https://corraini.com/it/librerie/121.html">corraini 121+</a></h2>
-        <p>via Savona 17/5 <br> 20144 Milano</p>
-
-        <h2><a target="_blank" href="https://www.facebook.com/PerdiTempobarNapoli/">perditempo</a></h2>
-        <p>Via S. Pietro a Maiella 8 <br> 800138 Napoli</p>
-
-        <h2><a target="_blank" href="https://www.emergenzeweb.it/edicola-518/">edicola 518</a></h2>
-        <p>Via Sant'Ercolano 42 <br> 06121 Perugia</p>
-
-        <h2> <a target="_blank" href="https://leporello-books.com">leporello</a></h2>
-        <p> Via del Pigneto 162/e - 00176 Roma</p>
-        <p class="links soldout"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-1-vertigo/"> ordina online vuoto #1</a></p>
-        <!-- <p class="links"> <a target="_blank" href="https://leporello-books.com/"> ordina online vuoto #2</a></p> -->
-
-        <h2><a target="_blank" href="http://www.libreriabodoni.it/">libreria bodoni</a></h2>
-        <p>via Carlo Alberto 41 <br> 10123 Torino</p>
-
-
+          <h2 class="sections">LIBRERIE</h2>
+          <ul v-for="city in cities">
+            <h2 class=cities>{{city.luogo}}</h2>
+            <div v-for="libreria in city.librerie">
+              <h3><a :href="libreria.web">{{libreria.nome}}</a></h3>
+              <p>{{libreria.indirizzo}} | <span class="links"> <a target="_blank" :href="libreria.web" >web</a></span></p>
+            </div>
+          </ul>
+        </div>
 
       </div>
     </div>
 
-    <style media="screen">
 
-      @-webkit-keyframes blinker {
-        from { opacity: 1.0; }
-        to { opacity: 0.0; }
+
+    <script type="text/javascript">
+      let network = function() {
+        return {
+          "cities": [{
+              "luogo": 'BOLOGNA',
+              "librerie": [{
+                "nome": 'corraini mambo',
+                "indirizzo": 'Via Don Minzoni 14',
+                "web": 'https://www.corraini.com/it/librerie/corraini-mambo-artbookshop.html'
+              }]
+            },
+            {
+              "luogo": 'FIRENZE',
+              "librerie": [{
+                "nome": 'todo modo',
+                "indirizzo": 'Via dei Fossi 15 rosso',
+                "web": 'https://todomodo.org/'
+              }]
+            },
+            {
+              "luogo": 'MANTOVA',
+              "librerie": [{
+                "nome": 'galleria corraini',
+                "indirizzo": 'Via Ippolito Nievo 7a',
+                "web": 'https://corraini.com/it/librerie/galleria-corraini.html'
+              }]
+            },
+            {
+              "luogo": 'Milano',
+              "librerie": [{
+                  "nome": 'spazio b**k',
+                  "indirizzo": 'Via Porro Lambertenghi 20',
+                  "web": 'https://www.spaziobk.com/'
+                },
+                {
+                  "nome": 'noi libreria',
+                  "indirizzo": 'Via delle Leghe 18',
+                  "web": 'https://www.noilibreria.it/'
+                },
+                {
+                  "nome": 'corraini 121+',
+                  "indirizzo": 'Via Savona 17/5',
+                  "web": 'https://corraini.com/it/librerie/121.html'
+                }
+              ]
+            },
+            {
+              "luogo": 'NAPOLI',
+              "librerie": [{
+                "nome": 'perditempo',
+                "indirizzo": 'Via S. Pietro a Maiella 8',
+                "web": 'https://www.facebook.com/PerdiTempobarNapoli/'
+              }]
+            },
+            {
+              "luogo": 'PERUGIA',
+              "librerie": [{
+                "nome": 'edicola 518',
+                "indirizzo": "Via Sant'Ercolano 42",
+                "web": 'https://www.emergenzeweb.it/edicola-518/'
+              }]
+            },
+            {
+              "luogo": 'ROMA',
+              "librerie": [{
+                "nome": 'leporello',
+                "indirizzo": "Via del Pigneto 162/e",
+                "web": 'https://leporello-books.com/'
+              }]
+            },
+            {
+              "luogo": 'TORINO',
+              "librerie": [{
+                "nome": 'libreria bodoni',
+                "indirizzo": "via Carlo Alberto 41",
+                "web": 'http://www.libreriabodoni.it/'
+              }]
+            },
+          ]
+        }
       }
 
-      .links {
-        margin-top: .3em;
-      }
 
-      .link-to-bookshops a{
-        font-size: 2em;
-        text-decoration: none;
-        animation-name: blinker;
-      }
-
-      .soldout a{
-        text-decoration: line-through;
-      }
-      .soldout::after {
-        content: " SOLDOUT";
-        font-weight: 700;
-      }
-    </style>
-
-
-    <!--
-    <div class="spacer100"></div>
-    <div class="vacuum">
-      <div class="pic"></div>
-    </div>
-    -->
+      var app = new Vue({
+        el: '#app',
+        data: network
+      })
+    </script>
 
 
 
     <div class="spacer100"></div>
   </div>
+
   <div class="footer gowhite" style="font-weight: 200">
     <div class="unprogettodi">
       vuoto è un progetto di
@@ -574,7 +623,6 @@
       pics.forEach(function(el, idx) {
         let img = document.createElement('img');
         let myclass = "img" + idx;
-        console.log(myclass);
         img.classList.add(myclass);
         img.src = el;
         imagebox.appendChild(img);
