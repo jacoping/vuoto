@@ -227,7 +227,7 @@
 
           <h3 class="online">leporello</h3>
           <p class="links soldout"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-1-vertigo/"> VUOTO 1 / VERTIGO</a></p>
-          <p class="links"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-2-controverso/"> VUOTO 2 / CONTROVERSO </a></p>
+          <p class="links active"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-2-controverso/"> VUOTO 2 / CONTROVERSO </a></p>
 
           <h3 class="online">spazio b**k</h3>
           <p class="links soldout"> <a href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">VUOTO 1 / VERTIGO</a></p>
@@ -237,7 +237,7 @@
             <h2 class=cities>{{city.luogo}}</h2>
             <div v-for="libreria in city.librerie">
               <h3><a :href="libreria.web">{{libreria.nome}}</a></h3>
-              <p>{{libreria.indirizzo}} | <span class="links"> <a target="_blank" :href="libreria.web" >web</a></span></p>
+              <p>{{libreria.indirizzo}}</p>
             </div>
           </ul>
         </div>

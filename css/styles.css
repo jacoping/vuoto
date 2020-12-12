@@ -435,36 +435,38 @@
   }
 
   .links a {
-    text-decoration: none;
-  }
-
-  .links::before {
-    content: "";
   }
 
   .soldout a {
     font-weight: 400;
-    text-decoration: line-through;
   }
-  .soldout::after {
+
+  .soldout::after, .soldout::before {
+    font-weight: 400;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    content: "SOLDOUT";
+    background-color: black;
+    color: white;
+  }
+
+  .soldout::before {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  .active::after, .active::before {
     font-weight: 400;
     margin-left: 0.5em;
     padding-left: 0.3em;
     padding-right: 0.3em;
     font-size: 0.8em;
-    content: "SOLDOUT";
+    content: "BUY IT!";
     background-color: white;
     color: black;
   }
 
-  .soldout::before {
-    font-weight: 400;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    font-size: 0.8em;
-    content: "SOLDOUT";
+  .active::before {
     background-color: transparent;
     color: transparent;
   }
