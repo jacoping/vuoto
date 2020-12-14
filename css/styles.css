@@ -82,7 +82,7 @@
     font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
   }
 
-  #vertigo {
+  .issue-container {
     letter-spacing: .04em;
   }
 
@@ -300,12 +300,12 @@
 
 
 
-  #vertigo {
+  .issue-container {
     font-weight: 300;
     margin: 0 auto;
   }
 
-  #vertigo h2 {
+  .issue-container h2 {
     font-size: 1.5em;
     font-weight: 300;
     line-height: 0.9;
@@ -316,7 +316,7 @@
     font-weight: 600;
   }
 
-  #vertigo p {
+  .issue-container p {
     hyphens: auto;
   }
 
@@ -530,7 +530,7 @@
       top: 30vh;
     }
 
-    #vertigo {
+    .issue-container {
       width: 100%;
       font-weight: 400;
       margin: 0;
