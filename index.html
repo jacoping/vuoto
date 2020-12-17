@@ -231,20 +231,23 @@
           <p class="links active"> <a target="_blank" href="https://leporello-books.com/prodotto/vuoto-2-controverso/"> VUOTO 2 / CONTROVERSO </a></p>
 
           <h3 class="online">spazio b**k</h3>
-          <p class="links soldout"> <a href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">VUOTO 1 / VERTIGO</a></p>
+          <p class="links soldout"> <a target="_blank" href="https://www.spaziobk.com/prodotto/libri/vuoto-1-vertigo/">VUOTO 1 / VERTIGO</a></p>
+          <p class="links active"> <a target="_blank" href="https://www.spaziobk.com/prodotto/libri/vuoto-2-controverso/">VUOTO 2 / CONTROVERSO</a></p>
+
 
           <h3 class="online">edicola 518</h3>
-          <p class="links soldout"> <a href="https://www.emergenzeweb.it/">VUOTO 1 / VERTIGO</a></p>
+          <p class="links soldout"> <a target="_blank" href="https://www.emergenzeweb.it/">VUOTO 1 / VERTIGO</a></p>
           <p class="links active"> <a target="_blank" href="https://www.emergenzeweb.it/prodotto/vuoto-%E2%84%96-2/"> VUOTO 2 / CONTROVERSO </a></p>
 
+
           <h2 class="sections">LIBRERIE</h2>
-          <ul v-for="city in cities">
+          <div v-for="city in cities">
             <h2 class=cities>{{city.luogo}}</h2>
             <div v-for="libreria in city.librerie">
               <h3><a :href="libreria.web">{{libreria.nome}}</a></h3>
               <p>{{libreria.indirizzo}}</p>
             </div>
-          </ul>
+          </div>
         </div>
 
       </div>
