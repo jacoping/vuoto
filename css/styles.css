@@ -406,14 +406,19 @@
     text-align: center;
   }
 
+  .network h2.sections {
+    font-size: 2em;
+    margin-top: 2em;
+  }
+
   .network h2.cities {
     font-weight: 400;
     font-size: 1em;
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 0;
     text-transform: uppercase;
   }
-
+  
   .network h3 {
     font-size: 1.2em;
     margin-top: 0.4em;
@@ -424,10 +429,7 @@
     margin-top: 1em;
   }
 
-  .network h2.sections {
-    font-size: 2em;
-    margin-top: 2em;
-  }
+
 
   .links {
     margin-top: .5em;
