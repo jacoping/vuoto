@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VUOTO // Around Tables</title>
+  <!-- Redirect to https -->
+  <script src="/js/http-redirect.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/skj1zoz.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-79NJETB0F2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-79NJETB0F2');
+  </script>
+
+
+
+
+</head>
+
+<style media="screen">
+  :root {
+    --BG: #000;
+    --INITCOL: #444;
+    --FINALCOL: white;
+    --COL: var(--INITCOL);
+  }
+
+  *,
+  a {
+    color: inherit;
+  }
+
+  @keyframes neon2 {
+    0%  { --COL: var(--INITCOL) }
+
+    29% { --COL: var(--INITCOL) }
+    30% { --COL: var(--FINALCOL) }
+    31% { --COL: var(--INITCOL) }
+
+    73% { --COL: var(--INITCOL) }
+    74% { --COL: var(--FINALCOL) }
+    75% { --COL: var(--INITCOL) }
+    76% { --COL: var(--FINALCOL) }
+    82% { --COL: var(--INITCOL) }
+
+    to  { --COL: var(--INITCOL) }
+  }
+
+:root {
+  animation-name: neon2;
+  animation-duration: 0s;
+}
+
+  div, h1, p {
+    color: var(--COL);
+    sborder: 1px solid var(--COL);
+  }
+
+  body,
+  .wrapper,
+  #particles-js {
+    background-color: var(--BG);
+  }
+
+
+  /* positioning for particles.js
+
+  body,
+  html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
+  #particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0
+  }
+
+  #particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+  }
+
+  */
+
+</style>
+
+
+
+
+
+
+<style media="screen">
+
+  /* styles */
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 30px 10px 10px;
+  }
+
+  html {
+    font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
+  }
+
+  .fullpage {
+    min-height: 100vh;
+  }
+
+  h1 {
+    line-height: .9;
+    font-weight: 400;
+    font-size: 26vw;
+  }
+
+  .j-title {
+    font-weight: 400;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 5.5vw;
+  }
+
+  .language_selector {
+    position: fixed;
+    right: 0;
+    margin: 20px
+  }
+
+  p {
+    line-height: 1.1;
+  }
+
+
+  .animA {
+    animation-name: rotationA;
+    animation-duration: 1s;
+  }
+
+  @keyframes rotationA {
+    00%  { transform: rotate(0deg) }
+    10%  { transform: rotate(0deg) }
+    20%  { transform: rotate(90deg) }
+    30%  { transform: rotate(180deg) }
+    40%  { transform: rotate(270deg) }
+    50%  { transform: rotate(360deg) }
+    60%  { transform: rotate(450deg) }
+    70%  { transform: rotate(540deg) }
+    80%  { transform: rotate(630deg) }
+    90%  { transform: rotate(720deg) }
+    to  { transform: rotate(810deg) }
+  }
+
+  .animD {
+    animation-name: rotationD;
+    animation-duration: .5s;
+    animation-iteration-count: 3;
+    animation-delay: 4s;
+  }
+
+  @keyframes rotationD {
+    00%  { transform: rotate(0deg) }
+    10%  { transform: rotate(0deg) }
+    20%  { transform: rotate(90deg) }
+    30%  { transform: rotate(180deg) }
+    40%  { transform: rotate(270deg) }
+    50%  { transform: rotate(360deg) }
+    60%  { transform: rotate(450deg) }
+    70%  { transform: rotate(540deg) }
+    80%  { transform: rotate(630deg) }
+    90%  { transform: rotate(720deg) }
+    to  { transform: rotate(810deg) }
+  }
+
+  .animT {
+    animation-name: rotationT;
+    animation-duration: 1s;
+    animation-delay: 3s;
+  }
+
+  @keyframes rotationT {
+    00%  { transform: rotate(0deg) }
+    10%  { transform: rotate(0deg) }
+    20%  { transform: rotate(90deg) }
+    30%  { transform: rotate(180deg) }
+    40%  { transform: rotate(270deg) }
+    50%  { transform: rotate(360deg) }
+    60%  { transform: rotate(450deg) }
+    70%  { transform: rotate(540deg) }
+    to%  { transform: rotate(630deg) }
+    90%  { transform: rotate(720deg) }
+    to  { transform: rotate(810deg) }
+  }
+
+  .animS {
+    animation-name: rotationS;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+  }
+
+  @keyframes rotationS {
+    00%  { transform: rotate(0deg) }
+    10%  { transform: rotate(0deg) }
+    20%  { transform: rotate(90deg) }
+    30%  { transform: rotate(180deg) }
+    40%  { transform: rotate(270deg) }
+    50%  { transform: rotate(360deg) }
+    60%  { transform: rotate(450deg) }
+    70%  { transform: rotate(540deg) }
+    80%  { transform: rotate(630deg) }
+    90%  { transform: rotate(720deg) }
+    to  { transform: rotate(810deg) }
+  }
+
+</style>
+
+<body>
+
+
+  <!--
+  <div class="language_selector">
+    <h3>ITA | ENG </h3>
+  </div>
+  -->
+
+  <div class="main">
+    <div id="particles-js">
+    </div>
+
+
+    <div class="container fullpage">
+
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title animA" style="transform: rotate(90deg)"> A </span>
+        <span class="j-title"> R </span>
+        <span class="j-title"> O </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title"> U </span>
+        <span class="j-title"> N </span>
+        <span class="j-title animD" style="transform: rotate(90deg)"> D </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title animT" style="transform: rotate(-90deg)"> T </span>
+        <span class="j-title"> A </span>
+        <span class="j-title"> B </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title"> L </span>
+        <span class="j-title"> E </span>
+        <span class="j-title animS" style="transform: rotate(-90deg)"> S </span>
+      </h1>
+      <h2 style="position: absolute; bottom: 20px;" class="d-flex justify-content-center">ARGUMENTS IN PUBLIC SPACE / <br> ARGUMENTS FOR PUBLIC SPACE</h2>
+
+    </div>
+
+    <div class="container">
+
+      <h2>AROUND TABLES</h2>
+      <p>Is an open archive of public spaces, a collection of projects, texts, audios and videos that manifest the dual nature of the city as a place of both gathering encounter and dispute. The table represents the device and the ground upon which encounters and collective confrontation take place, the space in which the experiences are shared and brought together but also the space in which conflicts and collisions are tackled and solved (or not). </p>
+      <br>
+      <br>
+
+      <h2>PROSSIMA APERTURA</h2>
+      <p>Is a public square designed by Orizzontale and built in a social housing district in Aprilia (Lazio, Italy) between 2019 and 2021. The project is exhibited in the garden of Padiglione Italia at the 17. Venice Biennale, through the display of two iconic elements: a communication tower and a large round table. Prossima Apertura will represent the first entry of the open archive.</p>
+      <p><a style="text-decoration: underline" href=""> More about Prossima Apertura </a></p>
+      <br>
+      <br>
+
+      <h2>VUOTO 4</h2>
+      <p>Collected ideas, projects, photographs, videos, audios, and other media will be displayed on the website of the initiative. A selection of the entries will be published in a future issue of Vuoto bookazine.</p>
+      <p><a style="text-decoration: underline" href="/privacy">More about Vuoto</a></p>
+      <br>
+      <br>
+
+      <h2>HOW TO PARTICIPATE</h2>
+      <p>Bla bla bla.</p>
+      <br>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="/privacy">privacy policy</a>
+      <br>
+      <br>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <script src="js/particles.min.js"></script>
+  <script>
+    sparticlesJS.load('particles-js', 'js/particlesjs-config-2.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
+
+
+  <script type="text/javascript">
+    window.setTimeout(function() {
+      window.addEventListener("click", function() {
+        let v = getComputedStyle(document.documentElement).getPropertyValue('--FINALCOL');
+        document.documentElement.style.setProperty('--INITCOL', v);
+      });
+    }), 6000;
+    let v = getComputedStyle(document.documentElement).getPropertyValue('--FINALCOL');
+    document.documentElement.style.setProperty('--INITCOL', v);
+  </script>
+
+
+</body>
+
+</html>
