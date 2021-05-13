@@ -9,7 +9,7 @@
   <!-- Redirect to https -->
   <script src="/js/http-redirect.js"></script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.typekit.net/skj1zoz.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,7 +38,9 @@
   }
 
   *,
-  a {
+  a,
+  a:hover,
+  a:active {
     color: inherit;
   }
 
@@ -134,7 +136,6 @@
     position: absolute;
     bottom: 20px;
     width: 90vw;
-    text-align: center;"
   }
 
   .fullpage {
@@ -151,97 +152,73 @@
     font-weight: 400;
   }
 
+  .spacer1em {
+    height: 1em;
+  }
+  .spacer2em {
+    height: 2em;
+  }
+  .spacer4em {
+    height: 4em;
+  }
+
+
   h2 {
     font-weight: 400;
     font-size: 5.5vw;
   }
 
   p {
-    line-height: 1.1;
+    font-weight: 300;
+    line-height: 1.3;
+    text-align: justify;
+    text-indent: 1.5em;
+    margin: 0;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  }
+
+  p b {
+    font-weight: 700;
+  }
+
+  .return-icon {
+    width: .7em;
+    margin-top: -.1em;
+    margin-right: .2em;
+  }
+
+  .collapsible a,
+  .collapsible a:active,
+  .collapsible a:hover {
+    text-decoration: none;
+  }
+
+  .collapsible img {
+    transform: rotate(90deg);
+    transition-duration: .3s;
+  }
+
+  .collapsed img {
+    transform: rotate(0deg);
   }
 
 
-  .animA {
-    animation-name: rotationA;
-    animation-duration: 1s;
+  .blink_me {
+    animation: blinker 1s linear infinite;
   }
 
-  @keyframes rotationA {
-    00%  { transform: rotate(0deg) }
-    10%  { transform: rotate(0deg) }
-    20%  { transform: rotate(90deg) }
-    30%  { transform: rotate(180deg) }
-    40%  { transform: rotate(270deg) }
-    50%  { transform: rotate(360deg) }
-    60%  { transform: rotate(450deg) }
-    70%  { transform: rotate(540deg) }
-    80%  { transform: rotate(630deg) }
-    90%  { transform: rotate(720deg) }
-    to  { transform: rotate(810deg) }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }
 
-  .animD {
-    animation-name: rotationD;
-    animation-duration: .5s;
-    animation-iteration-count: 3;
-    animation-delay: 4s;
-  }
 
-  @keyframes rotationD {
-    00%  { transform: rotate(0deg) }
-    10%  { transform: rotate(0deg) }
-    20%  { transform: rotate(90deg) }
-    30%  { transform: rotate(180deg) }
-    40%  { transform: rotate(270deg) }
-    50%  { transform: rotate(360deg) }
-    60%  { transform: rotate(450deg) }
-    70%  { transform: rotate(540deg) }
-    80%  { transform: rotate(630deg) }
-    90%  { transform: rotate(720deg) }
-    to  { transform: rotate(810deg) }
-  }
-
-  .animT {
-    animation-name: rotationT;
-    animation-duration: 1s;
-    animation-delay: 3s;
-  }
-
-  @keyframes rotationT {
-    00%  { transform: rotate(0deg) }
-    10%  { transform: rotate(0deg) }
-    20%  { transform: rotate(90deg) }
-    30%  { transform: rotate(180deg) }
-    40%  { transform: rotate(270deg) }
-    50%  { transform: rotate(360deg) }
-    60%  { transform: rotate(450deg) }
-    70%  { transform: rotate(540deg) }
-    to%  { transform: rotate(630deg) }
-    90%  { transform: rotate(720deg) }
-    to  { transform: rotate(810deg) }
-  }
-
-  .animS {
-    animation-name: rotationS;
-    animation-duration: 1.5s;
-    animation-delay: 2s;
-  }
-
-  @keyframes rotationS {
-    00%  { transform: rotate(0deg) }
-    10%  { transform: rotate(0deg) }
-    20%  { transform: rotate(90deg) }
-    30%  { transform: rotate(180deg) }
-    40%  { transform: rotate(270deg) }
-    50%  { transform: rotate(360deg) }
-    60%  { transform: rotate(450deg) }
-    70%  { transform: rotate(540deg) }
-    80%  { transform: rotate(630deg) }
-    90%  { transform: rotate(720deg) }
-    to  { transform: rotate(810deg) }
-  }
 
 </style>
+
 
 <body>
 
@@ -272,47 +249,78 @@
         <span class="j-title"> E </span>
         <span class="j-title animS" style="transform: rotate(-90deg)"> S </span>
       </h1>
-      <div class="subtitle">
+      <div class="subtitle text-center">
         <h2>ARGUMENTS IN PUBLIC SPACE / <br> ARGUMENTS FOR PUBLIC SPACE</h2>
+        <h2 style="color: #ffc107" class="blink_me"><a href="#participate">OPEN CALL!</a></h2>
       </div>
 
     </div>
 
-    <div class="container">
+    <div class="spacer1em"></div>
+    <div class="spacer1em"></div>
 
-      <h2>AROUND TABLES</h2>
-      <p>Is an open archive of public spaces, a collection of projects, texts, audios and videos that manifest the dual nature of the city as a place of both gathering encounter and dispute. The table represents the device and the ground upon which encounters and collective confrontation take place, the space in which the experiences are shared and brought together but also the space in which conflicts and collisions are tackled and solved (or not). </p>
-      <br>
-      <br>
 
-      <h2>PROSSIMA APERTURA</h2>
-      <p>Is a public square designed by Orizzontale and built in a social housing district in Aprilia (Lazio, Italy) between 2019 and 2021. The project is exhibited in the garden of Padiglione Italia at the 17. Venice Biennale, through the display of two iconic elements: a communication tower and a large round table. Prossima Apertura will represent the first entry of the open archive.</p>
-      <p><a style="text-decoration: underline" href=""> More about Prossima Apertura </a></p>
-      <br>
-      <br>
+    <div class="container" id="content">
 
-      <h2>VUOTO 4</h2>
-      <p>Collected ideas, projects, photographs, videos, audios, and other media will be displayed on the website of the initiative. A selection of the entries will be published in a future issue of Vuoto bookazine.</p>
-      <p><a style="text-decoration: underline" href="/privacy">More about Vuoto</a></p>
-      <br>
-      <br>
+      <div class=""id ="participate">
 
-      <h2>HOW TO PARTICIPATE</h2>
-      <p>Bla bla bla.</p>
-      <br>
-      <br>
+        <div class="spacer1em"></div>
+        <p>Are you willing to share projects, thoughts or documents about the current nature and use of <b>public space as both a place of encounter and a place of conflict?</b></p>
+        <p>You are welcome to submit them to our open archive “<b>Around Tables</b>”.</p>
+        <p>The submission will be digital. <b>Any format or medium is accepted</b>, including texts, drawings, illustrations, photographs, films, video clips, collections of images, animations, interactive works, web art, audio recordings, songs, scores, choreographies, vr scenes, holograms...</p>
+        <p>The received material <b>will be published on this website</b>, and a selection will be part of a future issue of Vuoto, that will be published on paper in late 2021 / early 2022.</p>
+        <p>For any doubts or questions feel free to write to ciao@vuoto.xyz.</p>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+        <div class="spacer1em"></div>
+        <div class="spacer1em"></div>
+        <div class="text-center"><a class="btn btn-warning" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc4DZKjf2fiKVlmjZxo2UE4ykOmpXFDhlxXplkgOhYTPh5QTA/viewform"> Submit your content </a></div>
+      </div>
+
+      <div class="spacer4em"></div>
+      <div class="spacer4em"></div>
+
+      <h2 class="collapsible"><a class="collapsed" href="#aroundtables" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">AROUND TABLES</a></h2>
+      <div id="aroundtables" class="collapse" data-bs-parent="#content">
+        <div class="spacer1em"></div>
+        <p>Is an open archive of public spaces, a collection of projects, texts, audios and videos that manifest the dual nature of the city as a place of both gathering encounter and dispute.</p>
+        <p>The table represents the device and the ground upon which encounters and collective confrontation take place, the space in which the experiences are shared and brought together but also the space in which conflicts and collisions are tackled and solved (or not). </p>
+        <div class="spacer4em"></div>
+      </div>
+
+      <div class="spacer1em"></div>
+      <div class="spacer1em"></div>
+
+      <h2 class="collapsible"><a class="collapsed" href="#prossimaapertura" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">PROSSIMA APERTURA</a></h2>
+      <div id="prossimaapertura" class="collapse" data-bs-parent="#content">
+        <div class="spacer1em"></div>
+        <p>Is a public square designed by Orizzontale and built in a social housing district in Aprilia (Lazio, Italy) between 2019 and 2021. The project is exhibited in the garden of Padiglione Italia at the 17. </p>
+        <p>Venice Biennale, through the display of two iconic elements: a communication tower and a large round table. Prossima Apertura will represent the first entry of the open archive.</p>
+        <div class="spacer1em"></div>
+        <a target="_blank" href="https://prossimaapertura.orizzontale.org"> More about Prossima Apertura </a>
+        <div class="spacer4em"></div>
+      </div>
+
+      <div class="spacer1em"></div>
+      <div class="spacer1em"></div>
+
+      <h2 class="collapsible"><a class="collapsed" href="#vuoto4" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">VUOTO 4</a></h2>
+      <div id="vuoto4" class="collapse" data-bs-parent="#content">
+        <div class="spacer1em"></div>
+        <p>Collected ideas, projects, photographs, videos, audios, and other media will be displayed on the website of the initiative.</p>
+        <p>A selection of the entries will be published in a future issue of Vuoto bookazine.</p>
+        <div class="spacer1em"></div>
+        <a target="_blank" href="https://vuoto.xyz">More about Vuoto</a>
+        <div class="spacer4em"></div>
+      </div>
+
+
+
+      <div class="spacer4em"></div>
+      <div class="spacer4em"></div>
+
       <a href="/privacy">privacy policy</a>
-      <br>
-      <br>
+      <div class="spacer1em"></div>
+
 
     </div>
 
@@ -343,6 +351,94 @@
   </script>
 
 
+
+
+  <style media="screen">
+
+
+    .animA {
+      animation-name: rotationA;
+      animation-duration: 1s;
+    }
+
+    @keyframes rotationA {
+      00%  { transform: rotate(0deg) }
+      10%  { transform: rotate(0deg) }
+      20%  { transform: rotate(90deg) }
+      30%  { transform: rotate(180deg) }
+      40%  { transform: rotate(270deg) }
+      50%  { transform: rotate(360deg) }
+      60%  { transform: rotate(450deg) }
+      70%  { transform: rotate(540deg) }
+      80%  { transform: rotate(630deg) }
+      90%  { transform: rotate(720deg) }
+      to  { transform: rotate(810deg) }
+    }
+
+    .animD {
+      animation-name: rotationD;
+      animation-duration: .5s;
+      animation-iteration-count: 3;
+      animation-delay: 4s;
+    }
+
+    @keyframes rotationD {
+      00%  { transform: rotate(0deg) }
+      10%  { transform: rotate(0deg) }
+      20%  { transform: rotate(90deg) }
+      30%  { transform: rotate(180deg) }
+      40%  { transform: rotate(270deg) }
+      50%  { transform: rotate(360deg) }
+      60%  { transform: rotate(450deg) }
+      70%  { transform: rotate(540deg) }
+      80%  { transform: rotate(630deg) }
+      90%  { transform: rotate(720deg) }
+      to  { transform: rotate(810deg) }
+    }
+
+    .animT {
+      animation-name: rotationT;
+      animation-duration: 1s;
+      animation-delay: 3s;
+    }
+
+    @keyframes rotationT {
+      00%  { transform: rotate(0deg) }
+      10%  { transform: rotate(0deg) }
+      20%  { transform: rotate(90deg) }
+      30%  { transform: rotate(180deg) }
+      40%  { transform: rotate(270deg) }
+      50%  { transform: rotate(360deg) }
+      60%  { transform: rotate(450deg) }
+      70%  { transform: rotate(540deg) }
+      to%  { transform: rotate(630deg) }
+      90%  { transform: rotate(720deg) }
+      to  { transform: rotate(810deg) }
+    }
+
+    .animS {
+      animation-name: rotationS;
+      animation-duration: 1.5s;
+      animation-delay: 2s;
+    }
+
+    @keyframes rotationS {
+      00%  { transform: rotate(0deg) }
+      10%  { transform: rotate(0deg) }
+      20%  { transform: rotate(90deg) }
+      30%  { transform: rotate(180deg) }
+      40%  { transform: rotate(270deg) }
+      50%  { transform: rotate(360deg) }
+      60%  { transform: rotate(450deg) }
+      70%  { transform: rotate(540deg) }
+      80%  { transform: rotate(630deg) }
+      90%  { transform: rotate(720deg) }
+      to  { transform: rotate(810deg) }
+    }
+
+  </style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 </html>
