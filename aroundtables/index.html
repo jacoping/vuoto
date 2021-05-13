@@ -54,40 +54,8 @@
     font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
   }
 
-  .scontainer-fluid {
-    background-color: darkblue
-  }
-
-
-  @media only screen and (min-width: 600px) {
-    #content, #content .btn {
-      font-size: 3vw;
-    }
-    body {
-      padding: 2vw 8vw;
-    }
-
-  }
-
-  @media only screen and (max-width: 600px) {
-    .subtitle {
-      position: absolute;
-      bottom: 20px;
-      width: 90vw;
-    }
-    .desktop-spacer {
-      height: 0;
-    }
-  }
-
-
-
-
-
-
-
-  .fullpage {
-    min-height: 100vh;
+  .fullheight {
+    min-height: 85vh;
   }
 
   h1 {
@@ -126,12 +94,16 @@
     font-weight: 300;
     line-height: 1.3;
     text-align: justify;
-    text-indent: 1.5em;
     margin: 0;
     hyphens: auto;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
   }
+
+  .indent {
+    text-indent: 1.5em;
+  }
+
 
   p b {
     font-weight: 700;
@@ -158,6 +130,9 @@
     transform: rotate(0deg);
   }
 
+  .yellow {
+    color: #ffc107;
+  }
 
   .blink_me {
     animation: blinker 1s linear infinite;
@@ -171,6 +146,29 @@
 
 
 
+  @media only screen and (min-width: 600px) {
+    #content, #content .btn {
+      font-size: 3vw;
+    }
+    body {
+      padding: 2vw 8vw;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .subtitle {
+      position: absolute;
+      bottom: 20px;
+      width: 90vw;
+    }
+    .desktop-spacer {
+      height: 0;
+    }
+  }
+
+
+
 </style>
 
 
@@ -178,61 +176,55 @@
 
   <div class="main">
 
-    <div class="container-fluid fullpage">
+    <div class="container-fluid fullheight">
 
-      <div class="limited">
-        <h1 class="d-flex justify-content-between">
-          <span class="j-title animA" style="transform: rotate(90deg)"> A </span>
-          <span class="j-title"> R </span>
-          <span class="j-title"> O </span>
-        </h1>
-        <h1 class="d-flex justify-content-between">
-          <span class="j-title"> U </span>
-          <span class="j-title"> N </span>
-          <span class="j-title animD" style="transform: rotate(90deg)"> D </span>
-        </h1>
-        <h1 class="d-flex justify-content-between">
-          <span class="j-title animT" style="transform: rotate(-90deg)"> T </span>
-          <span class="j-title"> A </span>
-          <span class="j-title"> B </span>
-        </h1>
-        <h1 class="d-flex justify-content-between">
-          <span class="j-title"> L </span>
-          <span class="j-title"> E </span>
-          <span class="j-title animS" style="transform: rotate(-90deg)"> S </span>
-        </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title animA" style="transform: rotate(90deg)"> A </span>
+        <span class="j-title"> R </span>
+        <span class="j-title"> O </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title"> U </span>
+        <span class="j-title"> N </span>
+        <span class="j-title animD" style="transform: rotate(90deg)"> D </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title animT" style="transform: rotate(-90deg)"> T </span>
+        <span class="j-title"> A </span>
+        <span class="j-title"> B </span>
+      </h1>
+      <h1 class="d-flex justify-content-between">
+        <span class="j-title"> L </span>
+        <span class="j-title"> E </span>
+        <span class="j-title animS" style="transform: rotate(-90deg)"> S </span>
+      </h1>
 
-        <div class="desktop-spacer"></div>
-        <div class="desktop-spacer"></div>
-        <div class="desktop-spacer"></div>
-      </div>
+      <div class="desktop-spacer"></div>
+      <div class="desktop-spacer"></div>
+      <div class="desktop-spacer"></div>
 
 
       <div class="subtitle text-center">
         <h2>ARGUMENTS IN PUBLIC SPACE / <br> ARGUMENTS FOR PUBLIC SPACE</h2>
 
         <div class="desktop-spacer"></div>
-        <div class="desktop-spacer"></div>
+        <div class="spacer1em"></div>
 
-        <h2 style="color: #ffc107" class="blink_me"><a href="#participate">OPEN CALL!</a></h2>
+        <h2 id="opencall" class="yellow blink_me"><a href="#opencall">OPEN CALL!</a></h2>
       </div>
 
     </div>
 
-    <div class="spacer1em"></div>
-    <div class="spacer1em"></div>
-
-
-    <div class="container-fluid limited" id="content">
+    <div class="container-fluid" id="content">
 
       <div class=""id ="participate">
 
         <div class="spacer1em"></div>
-        <p>Are you willing to share projects, thoughts or documents about the current nature and use of <b>public space as both a place of encounter and a place of conflict?</b></p>
-        <p>You are welcome to submit them to our open archive “<b>Around Tables</b>”.</p>
-        <p>The submission will be digital. <b>Any format or medium is accepted</b>, including texts, drawings, illustrations, photographs, films, video clips, collections of images, animations, interactive works, web art, audio recordings, songs, scores, choreographies, vr scenes, holograms...</p>
-        <p>The received material <b>will be published on this website</b>, and a selection will be part of a future issue of Vuoto, that will be published on paper in late 2021 / early 2022.</p>
-        <p>For any doubts or questions feel free to write to ciao@vuoto.xyz.</p>
+        <p class="indent"> Are you willing to share projects, thoughts or documents about the current nature and use of <b>public space as both a place of encounter and a place of conflict?</b></p>
+        <p class="indent"> You are welcome to submit them to our open archive “<b>Around Tables</b>”.</p>
+        <p class="indent"> The submission will be digital. <b>Any format or medium is accepted</b>, including texts, drawings, illustrations, photographs, films, video clips, collections of images, animations, interactive works, web art, audio recordings, songs, scores, choreographies, vr scenes, holograms...</p>
+        <p class="indent"> The received material <b>will be published on this website</b>, and a selection will be part of a future issue of Vuoto, that will be published on paper in late 2021 / early 2022.</p>
+        <p class="indent"> For any doubts or questions feel free to write to ciao@vuoto.xyz.</p>
 
         <div class="spacer1em"></div>
         <div class="spacer1em"></div>
@@ -241,12 +233,18 @@
 
       <div class="spacer4em"></div>
       <div class="spacer4em"></div>
+      <div class="spacer4em"></div>
+
+      <h2 id="opencall" class="px-2 py-1 d-inline-block bg-white text-body">WANT TO KNOW MORE?</h2>
+      <div class="spacer1em"></div>
+      <div class="spacer1em"></div>
+
 
       <h2 class="collapsible"><a class="collapsed" href="#aroundtables" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">AROUND TABLES</a></h2>
       <div id="aroundtables" class="collapse" data-bs-parent="#content">
         <div class="spacer1em"></div>
-        <p>Is an open archive of public spaces, a collection of projects, texts, audios and videos that manifest the dual nature of the city as a place of both gathering encounter and dispute.</p>
-        <p>The table represents the device and the ground upon which encounters and collective confrontation take place, the space in which the experiences are shared and brought together but also the space in which conflicts and collisions are tackled and solved (or not). </p>
+        <p class="indent"> Is an open archive of public spaces, a collection of projects, texts, audios and videos that manifest the dual nature of the city as a place of both gathering encounter and dispute.</p>
+        <p class="indent"> The table represents the device and the ground upon which encounters and collective confrontation take place, the space in which the experiences are shared and brought together but also the space in which conflicts and collisions are tackled and solved (or not). </p>
         <div class="spacer4em"></div>
       </div>
 
@@ -256,8 +254,8 @@
       <h2 class="collapsible"><a class="collapsed" href="#prossimaapertura" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">PROSSIMA APERTURA</a></h2>
       <div id="prossimaapertura" class="collapse" data-bs-parent="#content">
         <div class="spacer1em"></div>
-        <p>Is a public square designed by Orizzontale and built in a social housing district in Aprilia (Lazio, Italy) between 2019 and 2021. The project is exhibited in the garden of Padiglione Italia at the 17. </p>
-        <p>Venice Biennale, through the display of two iconic elements: a communication tower and a large round table. Prossima Apertura will represent the first entry of the open archive.</p>
+        <p class="indent"> Is a public square designed by Orizzontale and built in a social housing district in Aprilia (Lazio, Italy) between 2019 and 2021. The project is exhibited in the garden of Padiglione Italia at the 17. </p>
+        <p class="indent"> Venice Biennale, through the display of two iconic elements: a communication tower and a large round table. Prossima Apertura will represent the first entry of the open archive.</p>
         <div class="spacer1em"></div>
         <a target="_blank" href="https://prossimaapertura.orizzontale.org"> More about Prossima Apertura </a>
         <div class="spacer4em"></div>
@@ -269,8 +267,8 @@
       <h2 class="collapsible"><a class="collapsed" href="#vuoto4" data-bs-toggle="collapse"><img src="return-icon.svg" class="return-icon">VUOTO 4</a></h2>
       <div id="vuoto4" class="collapse" data-bs-parent="#content">
         <div class="spacer1em"></div>
-        <p>Collected ideas, projects, photographs, videos, audios, and other media will be displayed on the website of the initiative.</p>
-        <p>A selection of the entries will be published in a future issue of Vuoto bookazine.</p>
+        <p class="indent"> Collected ideas, projects, photographs, videos, audios, and other media will be displayed on the website of the initiative.</p>
+        <p class="indent"> A selection of the entries will be published in a future issue of Vuoto bookazine.</p>
         <div class="spacer1em"></div>
         <a target="_blank" href="https://vuoto.xyz">More about Vuoto</a>
         <div class="spacer4em"></div>
@@ -289,7 +287,7 @@
 
   </div>
 
-
+  <!--
   <style media="screen">
 
 
@@ -374,8 +372,9 @@
     }
 
   </style>
+  -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 </html>
