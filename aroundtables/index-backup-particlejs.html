@@ -30,43 +30,110 @@
 </head>
 
 <style media="screen">
-
-  /* styles */
-
-  body,
-  html {
-    overflow-x: hidden;
-    color: white;
-    background-color: black;
+  :root {
+    --BG: #000;
+    --INITCOL: #444;
+    --FINALCOL: white;
+    --COL: var(--INITCOL);
   }
 
+  *,
   a,
   a:hover,
   a:active {
     color: inherit;
   }
 
-  body {
-    padding: 2vw 3vw;
+  @keyframes neon2 {
+    0%  { --COL: var(--INITCOL) }
+
+    29% { --COL: var(--INITCOL) }
+    30% { --COL: var(--FINALCOL) }
+    31% { --COL: var(--INITCOL) }
+
+    73% { --COL: var(--INITCOL) }
+    74% { --COL: var(--FINALCOL) }
+    75% { --COL: var(--INITCOL) }
+    76% { --COL: var(--FINALCOL) }
+    82% { --COL: var(--INITCOL) }
+
+    to  { --COL: var(--INITCOL) }
+  }
+
+:root {
+  animation-name: neon2;
+  animation-duration: 0s;
+}
+
+  div, h1, p {
+    color: var(--COL);
+    sborder: 1px solid var(--COL);
+  }
+
+  body,
+  .wrapper,
+  #particles-js {
+    background-color: var(--BG);
+  }
+
+
+  /* positioning for particles.js
+
+  body,
+  html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
+  #particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0
+  }
+
+  #particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+  }
+
+  */
+
+</style>
+
+
+
+
+
+
+<style media="screen">
+
+  /* styles */
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .limited {
+    padding: 2vw 10px 2vw;
   }
 
   html {
     font-family: neue-haas-grotesk-display, Helvetica, sans-serif;
   }
 
-  .scontainer-fluid {
+  .container-fluid {
     background-color: darkblue
-  }
-
-
-  @media only screen and (min-width: 600px) {
-    #content, #content .btn {
-      font-size: 3vw;
-    }
-    body {
-      padding: 2vw 8vw;
-    }
-
   }
 
   @media only screen and (max-width: 600px) {
@@ -79,12 +146,6 @@
       height: 0;
     }
   }
-
-
-
-
-
-
 
   .fullpage {
     min-height: 100vh;
@@ -120,7 +181,9 @@
     font-size: 5.5vw;
   }
 
-
+  #content, #content .btn {
+    font-size: 3vw;
+  }
 
   p {
     font-weight: 300;
@@ -288,6 +351,32 @@
     </div>
 
   </div>
+
+
+
+
+
+  <script src="js/particles.min.js"></script>
+  <script>
+    sparticlesJS.load('particles-js', 'js/particlesjs-config-2.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
+
+
+  <script type="text/javascript">
+    window.setTimeout(function() {
+      window.addEventListener("click", function() {
+        let v = getComputedStyle(document.documentElement).getPropertyValue('--FINALCOL');
+        document.documentElement.style.setProperty('--INITCOL', v);
+      });
+    }), 6000;
+    let v = getComputedStyle(document.documentElement).getPropertyValue('--FINALCOL');
+    document.documentElement.style.setProperty('--INITCOL', v);
+  </script>
+
+
 
 
   <style media="screen">
