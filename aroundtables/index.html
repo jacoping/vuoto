@@ -179,24 +179,24 @@
     <div class="container-fluid fullheight">
 
       <h1 class="d-flex justify-content-between">
-        <span class="j-title animA" style="transform: rotate(90deg)"> A </span>
+        <span class="j-title"> A </span>
         <span class="j-title"> R </span>
         <span class="j-title"> O </span>
       </h1>
       <h1 class="d-flex justify-content-between">
         <span class="j-title"> U </span>
         <span class="j-title"> N </span>
-        <span class="j-title animD" style="transform: rotate(90deg)"> D </span>
+        <span class="j-title"> D </span>
       </h1>
       <h1 class="d-flex justify-content-between">
-        <span class="j-title animT" style="transform: rotate(-90deg)"> T </span>
+        <span class="j-title"> T </span>
         <span class="j-title"> A </span>
         <span class="j-title"> B </span>
       </h1>
       <h1 class="d-flex justify-content-between">
         <span class="j-title"> L </span>
         <span class="j-title"> E </span>
-        <span class="j-title animS" style="transform: rotate(-90deg)"> S </span>
+        <span class="j-title"> S </span>
       </h1>
 
       <div class="desktop-spacer"></div>
@@ -375,6 +375,32 @@
   -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="js/anime.min.js"></script>
+  <script type="text/javascript">
+  let rotate = function(object, value, delay) {
+    anime({
+      targets: object,
+      rotate: value,
+      delay: delay,
+      duration: 2000,
+      easing: 'easeOutBounce'
+    })
+  }
+
+  let letters = document.querySelectorAll('.j-title')
+  let startvalues = [90, 0, 0,
+    0, 0, 90,
+    -90, 0, 0,
+    0, 0, -90
+  ]
+
+  letters.forEach(function(el, id) {
+    rotate(el, startvalues[id], 1000)
+  })
+
+</script>
+
+
 </body>
 
 </html>
