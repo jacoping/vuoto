@@ -27,12 +27,17 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-79NJETB0F2"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+    // load Google Analytics only if host is correct (do not load in development env)
+    var host = "vuoto.xyz"
+    if (window.location.host == host) {
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-79NJETB0F2');
     }
-    gtag('js', new Date());
-    gtag('config', 'G-79NJETB0F2');
   </script>
 
 </head>
