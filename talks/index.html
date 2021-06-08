@@ -61,11 +61,13 @@
       background-image: url(frattempo_bg1.jpg);
       background-size: cover;
       background-repeat: no-repeat;
+      font-size: 20px;
     }
 
     body {
       margin-top: 1rem;
       background: transparent;
+      font-size: 1.2rem;
     }
 
     .spacer-half-rem {
@@ -160,6 +162,14 @@
       height: 31vw;
     }
 
+    @media (max-width: 500px) {
+      iframe.youtube {
+        border: 2px solid black;
+        width: 80vw;
+        height: 45vw;
+      }
+    }
+
 
     .youtubeicon {
       width: 1em;
@@ -168,22 +178,14 @@
       position: absolute;
     }
 
+    .inline-block {
+      display: inline-block;
+    }
+
 
     /* MEDIA QUERIES */
 
     @media (min-width: 576px) {
-      html {
-        font-size: 20px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      html {
-        font-size: 20px;
-      }
-    }
-
-    @media (min-width: 992px) {
       html {
         font-size: 24px;
       }
@@ -221,7 +223,7 @@
     <div class="evento">
       <span class="w600"> 08/04 </span>
       <span class="w300"> 16:30 </span>
-      <p> <b>Nicolas Henninger, OfCA e collectif Exyzt</b> </p>
+      <p class="w600"> <span class="inline-block"> Nicolas Henninger</span> / <span class="inline-block">OfCA e collectif Exyzt  </span> </p>
       <p class="small mt-1"> moderator: <b>Juan Lopez Cano</b> </p>
       <p class="small mb-1">discussant: <b>Lorenzo Romito</b> </p>
       <details>
@@ -240,7 +242,7 @@
     <div class="evento">
       <span class="w600"> 20/04 </span>
       <span class="w300"> 17:30 </span>
-      <p> <b>Andreas Lang, public works</b> </p>
+      <p class="w600"> <span class="inline-block"> Andreas Lang</span> / <span class="inline-block">public works </span> </p>
       <p class="small mt-1"> moderator: <b>Salvatore Peluso</b> </p>
       <p class="small mb-1">discussant: <b>Azzurra Muzzonigro</b> </p>
       <details>
@@ -258,7 +260,7 @@
     <div class="evento">
       <span class="w600"> 20/05 </span>
       <span class="w300"> 17:30 </span>
-      <p> <b>Peter Fattinger, Fattinger Orso Architektur</b> </p>
+      <p class="w600"> <span class="inline-block"> Peter Fattinger</span> / <span class="inline-block"> Fattinger Orso Architektur </span> </p>
       <p class="small mt-1"> moderator: <b>Nina Bassoli</b> </p>
       <p class="small mb-1">discussant: <b>Alberto Iacovoni</b> </p>
       <details>
@@ -278,7 +280,7 @@
     <div class="evento">
       <span class="w600"> 03/06 </span>
       <span class="w300"> 17:30 </span>
-      <p> <b>Frauke Gerstenberg + Jan Liesegang, raumlabor-berlin</b> </p>
+      <p class="w600"> <span class="inline-block"> Frauke Gerstenberg + </span><span class="inline-block">Jan Liesegang</span> / <span class="inline-block"> raumlabor-berlin </span> </p>
       <p class="small mt-1"> moderator: <b>Giulia Ricci</b> </p>
       <p class="small mb-1">discussant: <b>Pippo Ciorra</b> </p>
       <details>
@@ -288,7 +290,7 @@
           <b>Giuseppe&nbspGrant</b> (orizzontale), <b>Elena Pelosi</b> (MAXXI - Museo nazionale delle arti del XXI secolo).</p>
       </details>
       <details>
-        <summary class="small"> video streaming <img class="youtubeicon" src="youtube.svg"></summary>
+        <summary class="small"> video recording <img class="youtubeicon" src="youtube.svg"></summary>
         <iframe class="youtube" src="https://www.youtube.com/embed/aX9MWnbB1Dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </details>
     </div>
@@ -298,9 +300,19 @@
     <div class="evento">
       <span class="w600"> 09/06 </span>
       <span class="w300"> 17:30 </span>
-      <p> <b>James Binning, Assemble Studio</b> </p>
+      <p class="w600"> <span class="inline-block"> James Binning </span> / <span class="inline-block"> Assemble Studio </span> </p>
       <p class="small mt-1"> moderator: <b>Rita Elvira Adamo</b> </p>
       <p class="small mb-1">discussant: <b>Ludovica Carbotta</b> </p>
+      <details>
+        <summary class="small">details</summary>
+        <p class="dettagli"> <b> James Binning </b> is a founding member of the design-led interdisciplinary practice Assemble. Assemble is a multi-disciplinary collective working across architecture, design and art. Founded in 2010 to undertake a single self-built project, Assemble has since delivered a diverse and award-winning body of works, whilst retaining a democratic and co-operative working method that enables built, social and research-based work at a variety of scales, both making things and making things happen. </p>
+        <p class="dettagli"> Moderator: <b>Rita Elvira Adamo</b><br>Discussant: <b>Ludovica Carbotta</b><br>Academic coordinators: <b>Federico De Matteis</b> (Università degli Studi dell'Aquila - DiceaaUnivaq),
+          <b>Giuseppe&nbspGrant</b> (orizzontale), <b>Elena Pelosi</b> (MAXXI - Museo nazionale delle arti del XXI secolo).</p>
+      </details>
+      <details>
+        <summary class="small"> video streaming <img class="youtubeicon" src="youtube.svg"></summary>
+        <iframe class="youtube" src="https://www.youtube.com/embed/QSh7S_yD2UE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </details>
     </div>
 
     <div class="spacer1rem"></div>
@@ -311,7 +323,7 @@
     <div class="spacer1rem"></div>
     <div class="spacer1rem"></div>
 
-    <div style="font-size: .9em; border-radius: .5em; display: inline; padding: .5em 1em; background: RGBA(255,255,255,.7)"> <a class="w600 link nounderline" target="_blank" href="https://www.youtube.com/channel/UCkEfydyCmyiJQKDhyF6VxfQ/videos"> Go
+    <div style="font-size: .7em; border-radius: .5em; display: inline; padding: .5em 1em; background: RGBA(255,255,255,.7)"> <a class="w600 link nounderline" target="_blank" href="https://www.youtube.com/channel/UCkEfydyCmyiJQKDhyF6VxfQ/videos"> Go
         to Vuoto Talks YouTube channel <i style="font-size:1.5em; vertical-align: text-top; margin-left:.3em; color: red;" class="bi bi-youtube"></i></a></div>
 
     <div class="spacer1rem"></div>
